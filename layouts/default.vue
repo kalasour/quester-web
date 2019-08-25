@@ -58,14 +58,15 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-footer :fixed="fixed" app>
-      <span>&copy; 2019</span>
-    </v-footer>
+    <Footer />
   </v-app>
 </template>
-
 <script>
+import Footer from '../components/Footer'
 export default {
+  components: {
+    Footer
+  },
   data() {
     return {
       clipped: false,
