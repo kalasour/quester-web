@@ -2,9 +2,9 @@
   <v-app>
     <Navbar />
     <v-content :style="{'background-color':'#F9F7F7'}" >
-      <v-container class="py-0">
+      <v-layout class="py-0">
         <nuxt />
-      </v-container>
+      </v-layout>
     </v-content>
     <Footer />
   </v-app>

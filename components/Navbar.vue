@@ -36,13 +36,13 @@ export default {
   data() {
     return {
       items: [
-        { text: 'เกี่ยวกับเรา', font: 'DB Helvethaica X',id:'#index' },
-        { text: 'Why Quester?', font: 'DB Helvethaica X' },
-        { text: 'วิธีใช้', font: 'DB Helvethaica X' },
-        { text: 'ข่าวสาร', font: 'DB Helvethaica X' },
-        { text: 'หน้านี้คืออะไร', font: 'DB Helvethaica X' },
-        { text: 'ข้อคิดเห็น', font: 'DB Helvethaica X' },
-        { text: 'ติดต่อเรา', font: 'DB Helvethaica X',id:'#footer' }
+        { text: 'เกี่ยวกับเรา', font: 'DB Helvethaica X', id: '#index' },
+        { text: 'Why Quester?', font: 'DB Helvethaica X', id: '#why' },
+        { text: 'วิธีใช้', font: 'DB Helvethaica X', id: '#how' },
+        { text: 'ข่าวสาร', font: 'DB Helvethaica X', id: '#news' },
+        { text: 'หน้านี้คืออะไร', font: 'DB Helvethaica X', id: '#what' },
+        { text: 'ข้อคิดเห็น', font: 'DB Helvethaica X', id: '#comment' },
+        { text: 'ติดต่อเรา', font: 'DB Helvethaica X', id: '#contact' }
       ]
     }
   }

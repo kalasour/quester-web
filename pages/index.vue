@@ -1,79 +1,72 @@
 <template >
-  <v-layout id="index" :style="{height:screenWidth}" row wrap justify-center align-center>
-    <v-flex xs10>
-      <v-layout row wrap justify-space-around align-center>
-        <v-flex xs5>
-          <v-layout column wrap justify-center align-center>
-            <span
-              class="display-2"
-              :style="{ 'font-family': 'SF Pro Display','font-weight':700, 'color':'#112D4E' }"
-            >REAL QUEST</span>
-            <span
-              class="display-2 mb-3"
-              :style="{ 'font-family': 'SF Pro Display','font-weight':700, 'color':'#112D4E' }"
-            >IN REAL LIFE</span>
-            <span
-              class="subtitle-1 mt-2"
-              :style="{ 'font-family': 'SF Pro Display','font-weight':300, 'color':'grey' }"
-            >Lorem ipsum dolor sit amet, consectetur</span>
-            <span
-              class="subtitle-1"
-              :style="{ 'font-family': 'SF Pro Display','font-weight':300, 'color':'grey' }"
-            >consectetur adipiscing elit. Suspendisse a felis felis. Aliquam</span>
-            <span
-              class="subtitle-1"
-              :style="{ 'font-family': 'SF Pro Display','font-weight':300, 'color':'grey' }"
-            >erat volutpat. Duis tincidunt pretium odio, et</span>
-            <span
-              class="subtitle-1"
-              :style="{ 'font-family': 'SF Pro Display','font-weight':300, 'color':'grey' }"
-            >vestibulum elit molestie ut.</span>
-          </v-layout>
-          <v-layout class="mt-5" row wrap justify-center>
-            <v-flex xs4>
-              <v-img :src="require('../assets/logo/app-store.svg')" />
-            </v-flex>
-            <v-flex xs4>
-              <v-img :src="require('../assets/logo/google-play.svg')" />
-            </v-flex>
-          </v-layout>
-        </v-flex>
-        <v-flex xs5 :style="{position:'relative'}">
-          <v-img
-            max-height="450"
-            contain
-            :src="require('../assets/logo/iphone.svg')"
-            :style="{position:'absolute',left:'45%',top:'5%'
-            }"
-          />
-          <v-img max-height="500" contain :src="require('../assets/logo/iphone.svg')" />
-        </v-flex>
-      </v-layout>
-    </v-flex>
-  </v-layout>
+  <v-flex xs12>
+    <v-layout id="index" :style="{height:screenHeight}" row wrap justify-center align-center>
+      <v-flex xs8>
+        <Intro />
+      </v-flex>
+    </v-layout>
+    <v-layout id="why" :style="{height:screenHeight}" row wrap justify-center align-start>
+      <v-flex xs12>
+        <Why />
+      </v-flex>
+    </v-layout>
+    <v-layout id="how" :style="{height:screenHeight}" row wrap justify-center align-start>
+      <v-flex xs12>
+        <How />
+      </v-flex>
+    </v-layout>
+    <v-layout id="news" :style="{height:screenHeight}" row wrap justify-center align-start>
+      <v-flex xs12>
+        <News />
+      </v-flex>
+    </v-layout>
+    <v-layout id="what" :style="{height:screenHeight}" row wrap justify-center align-start>
+      <v-flex xs12>
+        <What />
+      </v-flex>
+    </v-layout>
+    <v-layout id="comment" :style="{height:screenHeight}" row wrap justify-center align-start>
+      <v-flex xs12>
+        <Comment />
+      </v-flex>
+    </v-layout>
+    <v-layout id="contact" :style="{height:screenHeight}" row wrap justify-center align-start>
+      <v-flex xs12>
+        <Contact />
+      </v-flex>
+    </v-layout>
+  </v-flex>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
-
+import Intro from '~/components/Index/Intro'
+import Why from '~/components/Index/Why'
+import How from '~/components/Index/How'
+import News from '~/components/Index/News'
+import What from '~/components/Index/WhatIsPage'
+import Comment from '~/components/Index/Comments'
+import Contact from '~/components/Index/Contact'
 export default {
   beforeMount() {
-    this.screenWidth = `${window.innerHeight}px`
+    this.screenHeight = `${window.innerHeight}px`
   },
   components: {
     Logo,
-    VuetifyLogo
+    VuetifyLogo,
+    Intro,
+    Why,
+    How,
+    News,
+    What,
+    Comment,
+    Contact
   },
   data() {
     return {
-      screenWidth: null
+      screenHeight: null
     }
   }
 }
 </script>
-<style>
-span.SFProDisplay {
-  font-style: 'SF Pro Display';
-}
-</style>
