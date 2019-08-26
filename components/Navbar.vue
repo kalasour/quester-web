@@ -1,13 +1,6 @@
 <template>
   <div>
-    <v-app-bar
-      fixed
-      flat
-      class="py-1 pr-5"
-      color="#112D4E"
-      dark
-      
-    >
+    <v-app-bar fixed flat class="py-1 pr-5" color="#112D4E" dark>
       <v-img
         max-width="100"
         max-height="50"
@@ -22,7 +15,7 @@
 
       <div class="flex-grow-1"></div>
 
-      <v-btn text v-for="(item,index) in items" :key="index">
+      <v-btn text v-for="(item,index) in items" :key="index" @click="$vuetify.goTo(item.id)">
         <span :style="{ 'font-family': item.font ,'font-size':'28px' }">{{item.text}}</span>
       </v-btn>
     </v-app-bar>
@@ -43,13 +36,13 @@ export default {
   data() {
     return {
       items: [
-        { text: 'เกี่ยวกับเรา', font: 'DB Helvethaica X' },
+        { text: 'เกี่ยวกับเรา', font: 'DB Helvethaica X',id:'#index' },
         { text: 'Why Quester?', font: 'DB Helvethaica X' },
         { text: 'วิธีใช้', font: 'DB Helvethaica X' },
         { text: 'ข่าวสาร', font: 'DB Helvethaica X' },
         { text: 'หน้านี้คืออะไร', font: 'DB Helvethaica X' },
         { text: 'ข้อคิดเห็น', font: 'DB Helvethaica X' },
-        { text: 'ติดต่อเรา', font: 'DB Helvethaica X' }
+        { text: 'ติดต่อเรา', font: 'DB Helvethaica X',id:'#footer' }
       ]
     }
   }

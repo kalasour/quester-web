@@ -1,5 +1,5 @@
 <template >
-  <v-layout :style="{height:screenWidth}" row wrap justify-center align-center>
+  <v-layout id="index" :style="{height:screenWidth}" row wrap justify-center align-center>
     <v-flex xs10>
       <v-layout row wrap justify-space-around align-center>
         <v-flex xs5>
@@ -9,7 +9,7 @@
               :style="{ 'font-family': 'SF Pro Display','font-weight':700, 'color':'#112D4E' }"
             >REAL QUEST</span>
             <span
-              class="display-2 mb-5"
+              class="display-2 mb-3"
               :style="{ 'font-family': 'SF Pro Display','font-weight':700, 'color':'#112D4E' }"
             >IN REAL LIFE</span>
             <span

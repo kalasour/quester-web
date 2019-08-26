@@ -1,5 +1,5 @@
 <template>
-  <v-footer light color="white" class="text-xs-center">
+  <v-footer id="footer" light color="white" class="text-xs-center">
     <v-layout row justify-center align-center>
       <v-flex class="my-5" xs12>
         <v-img max-height="125" contain :src="require('../assets/logo/logo-dark.svg')" />
