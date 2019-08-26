@@ -1,60 +1,54 @@
-<template>
-  <v-layout column justify-center align-center>
-    <v-flex xs12 sm8 md6>
-      <div class="text-center">
-        <logo />
-        <vuetify-logo />
-      </div>
-      <v-card>
-        <v-card-title class="headline">Welcome to the Vuetify + Nuxt.js template</v-card-title>
-        <v-card-text>
-          <p>
-            Vuetify is a progressive Material Design component framework for
-            Vue.js. It was designed to empower developers to create amazing
-            applications.
-          </p>
-          <p>
-            For more information on Vuetify, check out the
-            <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-            >documentation</a>.
-          </p>
-          <p>
-            If you have questions, please join the official
-            <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              title="chat"
-            >discord</a>.
-          </p>
-          <p>
-            Find a bug? Report it on the github
-            <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              title="contribute"
-            >issue board</a>.
-          </p>
-          <p>
-            Thank you for developing with Vuetify and I look forward to bringing
-            more exciting features in the future.
-          </p>
-          <div class="text-xs-right">
-            <em>
-              <small>&mdash; John Leider</small>
-            </em>
-          </div>
-          <hr class="my-3" />
-          <a href="https://nuxtjs.org/" target="_blank">Nuxt Documentation</a>
-          <br />
-          <a href="https://github.com/nuxt/nuxt.js" target="_blank">Nuxt GitHub</a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn color="primary" nuxt to="/inspire">Continue</v-btn>
-        </v-card-actions>
-      </v-card>
+<template >
+  <v-layout :style="{height:screenWidth}" row wrap justify-center align-center>
+    <v-flex xs10>
+      <v-layout row wrap justify-space-around align-center>
+        <v-flex xs5>
+          <v-layout column wrap justify-center align-center>
+            <span
+              class="display-2"
+              :style="{ 'font-family': 'SF Pro Display','font-weight':700, 'color':'#112D4E' }"
+            >REAL QUEST</span>
+            <span
+              class="display-2 mb-5"
+              :style="{ 'font-family': 'SF Pro Display','font-weight':700, 'color':'#112D4E' }"
+            >IN REAL LIFE</span>
+            <span
+              class="subtitle-1 mt-2"
+              :style="{ 'font-family': 'SF Pro Display','font-weight':300, 'color':'grey' }"
+            >Lorem ipsum dolor sit amet, consectetur</span>
+            <span
+              class="subtitle-1"
+              :style="{ 'font-family': 'SF Pro Display','font-weight':300, 'color':'grey' }"
+            >consectetur adipiscing elit. Suspendisse a felis felis. Aliquam</span>
+            <span
+              class="subtitle-1"
+              :style="{ 'font-family': 'SF Pro Display','font-weight':300, 'color':'grey' }"
+            >erat volutpat. Duis tincidunt pretium odio, et</span>
+            <span
+              class="subtitle-1"
+              :style="{ 'font-family': 'SF Pro Display','font-weight':300, 'color':'grey' }"
+            >vestibulum elit molestie ut.</span>
+          </v-layout>
+          <v-layout class="mt-5" row wrap justify-center>
+            <v-flex xs4>
+              <v-img :src="require('../assets/logo/app-store.svg')" />
+            </v-flex>
+            <v-flex xs4>
+              <v-img :src="require('../assets/logo/google-play.svg')" />
+            </v-flex>
+          </v-layout>
+        </v-flex>
+        <v-flex xs5 :style="{position:'relative'}">
+          <v-img
+            max-height="450"
+            contain
+            :src="require('../assets/logo/iphone.svg')"
+            :style="{position:'absolute',left:'45%',top:'5%'
+            }"
+          />
+          <v-img max-height="500" contain :src="require('../assets/logo/iphone.svg')" />
+        </v-flex>
+      </v-layout>
     </v-flex>
   </v-layout>
 </template>
@@ -64,9 +58,17 @@ import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
 export default {
+  beforeMount() {
+    this.screenWidth = `${window.innerHeight}px`
+  },
   components: {
     Logo,
     VuetifyLogo
+  },
+  data() {
+    return {
+      screenWidth: null
+    }
   }
 }
 </script>
