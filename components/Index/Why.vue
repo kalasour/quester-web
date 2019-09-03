@@ -1,5 +1,5 @@
 <template>
-  <v-card class="text-xs-center py-5 grad" flat tile outlined>
+  <v-card class="text-xs-center py-5 blue-grad" tile outlined>
     <v-card-title class="justify-center">
       <span
         :style="{ color: 'white','font-family': 'DB Helvethaica X','font-weight': 750,'font-size':'40px' }"
@@ -13,7 +13,5 @@ export default {}
 </script>
 
 <style>
-div.grad {
-  background-image: linear-gradient(to right, #0D5AB2, #0F2F55);
-}
+
 </style>

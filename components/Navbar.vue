@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar fixed class="py-1 pr-5" color="#FAFAFA" light>
+    <v-app-bar fixed class="py-1 pr-5 custom-nav2" color="#FAFAFA" dark>
       <v-img
         max-width="100"
         max-height="50"
@@ -12,7 +12,6 @@
           :style="{ 'font-family': 'SF Pro Display','font-weight': 750,'font-size':'30px','color':'#112D4E' }"
         >Quester</span>-->
       </v-toolbar-title>
-
       <div class="flex-grow-1"></div>
 
       <v-btn text v-for="(item,index) in items" :key="index" @click="$vuetify.goTo(item.id)">
@@ -21,9 +20,51 @@
         >{{item.text}}</span>
       </v-btn>
     </v-app-bar>
+    <v-app-bar fixed class="py-1 pr-5 custom-nav" color="#FAFAFA" dark>
+      <v-img
+        max-width="100"
+        max-height="50"
+        contain
+        :src="require('../assets/logo/quester-logo-trans.svg')"
+      />
+      <v-toolbar-title>
+        <!-- <span
+          :style="{ 'font-family': 'SF Pro Display','font-weight': 750,'font-size':'30px','color':'#112D4E' }"
+        >Quester</span>-->
+      </v-toolbar-title>
+      <div class="flex-grow-1"></div>
+
+      <v-btn text v-for="(item,index) in items" :key="index" @click="$vuetify.goTo(item.id)">
+        <span
+          :style="{ 'font-family': item.font ,'font-size':'28px' ,'color':'#FAFAFA','font-weight':650}"
+        >{{item.text}}</span>
+      </v-btn>
+    </v-app-bar>
   </div>
 </template>
 <style scoped>
+.custom-nav2.v-app-bar--is-scrolled {
+  -moz-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -o-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+  opacity: 0;
+}
+.custom-nav2 {
+  opacity: 1;
+}
+.custom-nav {
+  /* background: transparent !important; */
+  -moz-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -o-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+  opacity: 0;
+}
+.custom-nav.v-app-bar--is-scrolled {
+  opacity: 1;
+  background: linear-gradient(45deg, #0d5ab2, #0f2f55);
+}
 span:hover {
   cursor: pointer;
 }
