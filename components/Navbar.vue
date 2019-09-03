@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar fixed flat class="py-1 pr-5" color="#112D4E" dark>
+    <v-app-bar fixed class="py-1 pr-5" color="#FAFAFA" light>
       <v-img
         max-width="100"
         max-height="50"
@@ -8,15 +8,17 @@
         :src="require('../assets/logo/quester-logo-trans.svg')"
       />
       <v-toolbar-title>
-        <span
-          :style="{ 'font-family': 'SF Pro Display','font-weight': 750,'font-size':'30px' }"
-        >Quester</span>
+        <!-- <span
+          :style="{ 'font-family': 'SF Pro Display','font-weight': 750,'font-size':'30px','color':'#112D4E' }"
+        >Quester</span>-->
       </v-toolbar-title>
 
       <div class="flex-grow-1"></div>
 
       <v-btn text v-for="(item,index) in items" :key="index" @click="$vuetify.goTo(item.id)">
-        <span :style="{ 'font-family': item.font ,'font-size':'28px' }">{{item.text}}</span>
+        <span
+          :style="{ 'font-family': item.font ,'font-size':'28px' ,'color':'#0F2F55','font-weight':650}"
+        >{{item.text}}</span>
       </v-btn>
     </v-app-bar>
   </div>

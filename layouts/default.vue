@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Navbar />
-    <v-content :style="{'background-color':'#F9F7F7'}" >
+    <v-content :style="{'background-color':'#FAFAFA'}" >
       <v-layout class="py-0">
         <nuxt />
       </v-layout>
