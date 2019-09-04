@@ -6,7 +6,7 @@
       </v-flex>
     </v-layout>
     <v-layout id="why" :style="{height:screenHeight}" row wrap justify-center align-start>
-      <v-flex xs12>
+      <v-flex xs12 class="mt-5">
         <Why />
       </v-flex>
     </v-layout>
