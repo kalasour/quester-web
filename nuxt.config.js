@@ -30,7 +30,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: "@/plugins/aos", ssr: false }],
+  plugins: [{ src: "@/plugins/aos", ssr: false },'~/plugins/vue-scrollactive.js'],
   /*
    ** Nuxt.js dev-modules
    */

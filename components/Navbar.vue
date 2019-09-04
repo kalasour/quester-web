@@ -13,12 +13,13 @@
         >Quester</span>-->
       </v-toolbar-title>
       <div class="flex-grow-1"></div>
-
-      <v-btn text v-for="(item,index) in items" :key="index" @click="$vuetify.goTo(item.id)">
-        <span
-          :style="{ 'font-family': item.font ,'font-size':'28px' ,'color':'#0F2F55','font-weight':650}"
-        >{{item.text}}</span>
-      </v-btn>
+      <scrollactive v-on:itemchanged="onItemChanged">
+        <v-btn text v-for="(item,index) in items" :key="index" @click="$vuetify.goTo(item.id)">
+          <span
+            :style="{ 'font-family': item.font ,'font-size':'28px' ,'color':'#0F2F55','font-weight':650}"
+          >{{item.text}}</span>
+        </v-btn>
+      </scrollactive>
     </v-app-bar>
     <v-app-bar fixed class="py-1 pr-5 custom-nav" color="#FAFAFA" dark>
       <v-img
@@ -33,16 +34,28 @@
         >Quester</span>-->
       </v-toolbar-title>
       <div class="flex-grow-1"></div>
-
-      <v-btn text v-for="(item,index) in items" :key="index" @click="$vuetify.goTo(item.id)">
-        <span
-          :style="{ 'font-family': item.font ,'font-size':'28px' ,'color':'#FAFAFA','font-weight':650}"
-        >{{item.text}}</span>
-      </v-btn>
+      <scrollactive v-on:itemchanged="onItemChanged">
+        <!-- <a href="#why" class="scrollactive-item">Home</a> -->
+        <v-btn
+          class="scrollactive-item"
+          :href="item.id"
+          text
+          v-for="(item,index) in items"
+          :key="index"
+          @click="$vuetify.goTo(item.id)"
+        >
+          <span
+            :style="{ 'font-family': item.font ,'font-size':'28px' ,'color':'#FAFAFA','font-weight':650}"
+          >{{item.text}}</span>
+        </v-btn>
+      </scrollactive>
     </v-app-bar>
   </div>
 </template>
 <style scoped>
+.is-active {
+  border-bottom: 5px solid white;
+}
 .custom-nav2.v-app-bar--is-scrolled {
   -moz-transition: opacity 0.25s ease-in-out;
   -webkit-transition: opacity 0.25s ease-in-out;
@@ -51,6 +64,10 @@
   opacity: 0;
 }
 .custom-nav2 {
+  -moz-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -o-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
   opacity: 1;
 }
 .custom-nav {
@@ -61,7 +78,20 @@
   transition: opacity 0.25s ease-in-out;
   opacity: 0;
 }
+.v-btn::before {
+  background-color: transparent;
+}
+.v-btn:enabled {
+  background-color: transparent;
+}
+.v-btn::after {
+  background-color: transparent;
+}
 .custom-nav.v-app-bar--is-scrolled {
+  -moz-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -o-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
   opacity: 1;
   background: linear-gradient(45deg, #0d5ab2, #0f2f55);
 }
@@ -87,6 +117,11 @@ export default {
         { text: 'ข้อคิดเห็น', font: 'DB Helvethaica X', id: '#comment' },
         { text: 'ติดต่อเรา', font: 'DB Helvethaica X', id: '#contact' }
       ]
+    }
+  },
+  methods: {
+    onItemChanged(event, currentItem, lastActiveItem) {
+      console.log(currentItem)
     }
   }
 }

@@ -46,4 +46,7 @@ export default {
 .blue-grad {
   background-image: linear-gradient(to bottom right, #0d5ab2, #0f2f55);
 }
+.blue-grad-bot {
+  background-image: linear-gradient(to bottom, #0d5ab2, #0f2f55);
+}
 </style>

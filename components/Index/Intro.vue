@@ -62,7 +62,7 @@
         :style="{position:'absolute',left:'45%',top:'5%'
             }"
       /> -->
-      <v-img max-height="500" contain :src="require('~/assets/logo/iphone.svg')" />
+      <v-img max-height="500" contain :src="require('~/assets/photo/phone_2.svg')" />
     </v-flex>
   </v-layout>
 </template>

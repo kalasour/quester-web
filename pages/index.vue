@@ -25,15 +25,15 @@
         <What />
       </v-flex>
     </v-layout>
-    <v-layout id="comment" :style="{height:screenHeight}" row wrap justify-center align-start>
-      <v-flex xs12>
-        <Comment />
+    <v-layout id="comment" :style="{height:screenHeight}" class="blue-grad-bot" row wrap justify-center align-start>
+      <v-flex xs8 class="pt-5">
+        <Comment class="pt-5" />
       </v-flex>
     </v-layout>
-    <v-layout id="contact" :style="{height:screenHeight}" row wrap justify-center align-start>
-      <v-flex xs12>
+    <v-layout id="contact" row wrap justify-center align-start>
+      <!-- <v-flex xs12>
         <Contact />
-      </v-flex>
+      </v-flex> -->
     </v-layout>
   </v-flex>
 </template>
