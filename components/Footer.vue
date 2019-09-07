@@ -52,14 +52,14 @@
         </v-layout>
       </v-flex>
       <v-flex xs10 class="mt-5">
-        <v-layout row wrap justify-center>
+        <!-- <v-layout row wrap justify-center>
           <v-flex xs2>
             <v-img :src="require('../assets/logo/app-store.svg')" />
           </v-flex>
           <v-flex xs2>
             <v-img :src="require('../assets/logo/google-play.svg')" />
           </v-flex>
-        </v-layout>
+        </v-layout> -->
       </v-flex>
       <v-flex xs11>
         <hr class="mt-3" />

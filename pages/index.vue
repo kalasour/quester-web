@@ -10,9 +10,9 @@
         <Why />
       </v-flex>
     </v-layout>
-    <v-layout id="how" :style="{height:screenHeight}" row wrap justify-center align-start>
-      <v-flex xs12  class="mt-5">
-        <How />
+    <v-layout id="how" row wrap justify-center align-start>
+      <v-flex xs12  class="pt-5">
+        <How class="pt-5" />
       </v-flex>
     </v-layout>
     <v-layout id="news" row wrap justify-center align-start>
@@ -20,9 +20,9 @@
         <News />
       </v-flex>
     </v-layout>
-    <v-layout id="what" :style="{height:screenHeight}" row wrap justify-center align-start>
+    <v-layout id="what" row wrap justify-center align-start>
       <v-flex xs12  class="mt-5">
-        <What />
+        <!-- <What /> -->
       </v-flex>
     </v-layout>
     <v-layout id="comment" :style="{height:screenHeight}" class="blue-grad-bot" row wrap justify-center align-start>
@@ -32,7 +32,7 @@
     </v-layout>
     <v-layout id="contact" row wrap justify-center align-start>
       <v-flex xs12>
-        <Contact />
+        <!-- <Contact /> -->
       </v-flex>
     </v-layout>
   </v-flex>

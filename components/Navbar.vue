@@ -5,7 +5,7 @@
         max-width="100"
         max-height="50"
         contain
-        :src="require('../assets/logo/quester-logo-trans.svg')"
+        :src="require('~/assets/logo/quester-logo-trans.svg')"
       />
       <v-toolbar-title>
         <!-- <span
@@ -26,7 +26,7 @@
         max-width="100"
         max-height="50"
         contain
-        :src="require('../assets/logo/quester-logo-trans.svg')"
+        :src="require('~/assets/logo/quester-logo-trans.svg')"
       />
       <v-toolbar-title>
         <!-- <span

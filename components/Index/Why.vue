@@ -60,11 +60,150 @@
         </client-only>
       </v-flex>
     </v-layout>
+    <v-card class="text-xs-center py-5 mt-2 blue-grad" flat tile outlined>
+      <v-card-title class="justify-center">
+        <client-only>
+          <div data-aos-once="true" data-aos="fade-down" data-aos-delay="200">
+            <p
+              class="mb-1"
+              :style="{ color: 'white','font-family': 'DB Helvethaica X','font-weight': 750,'font-size':'70px'  }"
+            >อิสรภาพในการจ้างงาน</p>
+          </div>
+        </client-only>
+      </v-card-title>
+    </v-card>
+    <v-layout row wrap justify-center class="pb-3" :style="{'border-bottom':'2px solid grey'}">
+      <v-flex xs10>
+        <client-only>
+          <div
+            data-aos-once="true"
+            data-aos="zoom-out"
+            data-aos-duration="700"
+            data-aos-delay="300"
+          >
+            <v-layout row wrap>
+              <v-flex xs4 v-for="i in 3" :key="i">
+                <v-img
+                  max-height="300"
+                  min-height="300"
+                  contain
+                  class="mt-5 mb-1"
+                  :src="require(`~/assets/photo/freedom/${i}.svg`)"
+                />
+              </v-flex>
+            </v-layout>
+          </div>
+        </client-only>
+      </v-flex>
+      <v-flex xs10>
+        <client-only>
+          <div
+            data-aos-once="true"
+            data-aos="zoom-out"
+            data-aos-duration="700"
+            data-aos-delay="300"
+          >
+            <v-layout row wrap>
+              <v-flex xs4 v-for="i in 3" :key="i">
+                <p
+                  class="mb-3 text-center"
+                  :style="{ color: '#0F2F55','line-height': '80%','font-family': 'DB Helvethaica X','font-weight': 'bold','font-size':'70px'  }"
+                >{{heads[i-1]}}</p>
+                <p
+                  class="mb-1 text-center px-5"
+                  :style="{ color: '#0F2F55','font-family': 'DB Helvethaica X','font-weight': 'normal','font-size':'24px'  }"
+                >{{details[i-1]}}</p>
+              </v-flex>
+            </v-layout>
+          </div>
+        </client-only>
+      </v-flex>
+    </v-layout>
+    <v-card class="text-xs-center py-5 mt-0" color="white" tile>
+      <v-card-title  class="justify-center">
+        <client-only>
+          <div data-aos-once="true" data-aos="fade-down" data-aos-delay="200">
+            <p
+              class="mb-1"
+              :style="{ color: '#112D4E','font-family': 'DB Helvethaica X','font-weight': 750,'font-size':'70px'  }"
+            >อิสรภาพในการทำงาน</p>
+          </div>
+        </client-only>
+      </v-card-title>
+    </v-card>
+    <v-layout class="sky-grad pb-5" row wrap justify-center>
+      <v-flex xs10>
+        <client-only>
+          <div
+            data-aos-once="true"
+            data-aos="zoom-out"
+            data-aos-duration="700"
+            data-aos-delay="300"
+          >
+            <v-layout row wrap>
+              <v-flex xs4 v-for="i in 3" :key="i">
+                <v-img
+                  max-height="300"
+                  min-height="300"
+                  contain
+                  class="mt-5 mb-1"
+                  :src="require(`~/assets/photo/freedom/${i+3}.svg`)"
+                />
+              </v-flex>
+            </v-layout>
+          </div>
+        </client-only>
+      </v-flex>
+      <v-flex xs10>
+        <client-only>
+          <div
+            data-aos-once="true"
+            data-aos="zoom-out"
+            data-aos-duration="700"
+            data-aos-delay="300"
+          >
+            <v-layout row wrap>
+              <v-flex xs4 v-for="i in 3" :key="i">
+                <p
+                  class="mb-3 text-center"
+                  :style="{ color: 'white','line-height': '80%','font-family': 'DB Helvethaica X','font-weight': 'bold','font-size':'70px'  }"
+                >{{heads[i+2]}}</p>
+                <p
+                  class="mb-1 text-center px-5"
+                  :style="{ color: 'white','font-family': 'DB Helvethaica X','font-weight': 'normal','font-size':'24px'  }"
+                >{{details[i+2]}}</p>
+              </v-flex>
+            </v-layout>
+          </div>
+        </client-only>
+      </v-flex>
+    </v-layout>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      heads: [
+        'หาคนมาทำอะไรก็ได้',
+        '(ไม่ใช่)ใครก็ได้',
+        '(ไม่ใช่)ที่ไหนก็ได้',
+        'มีงานทุกประเภท',
+        'งานใกล้ตัว',
+        'เสนอเงินเพิ่มได้'
+      ],
+      details: [
+        'เรื่องเล็กๆน้อยๆของผู้อื่น อาจจะเป็นเรื่องที่คุณต้องการความช่วยเหลือ เช่น การจับสัตว์ที่คุณไม่ชอบให้ออกไปจากห้องของคุณ เราเข้าใจและพร้อมช่วยหาคนมาช่วยเหลือคุณ',
+        'เบื่อไหม กับการที่จะจ้างใครแล้วไม่มั่นใจว่าจะทำได้หรือไม่ หรืออยากจะเลือกด้วยตัวเอง เราให้คุณเลือกผู้ที่จะมาทำงานให้คุณได้เต็มที่',
+        'เราพร้อมหาคนที่อยู่ใกล้ๆกับคุณ มาช่วยเหลือคุณได้ เพื่อความสะดวกทั้งคุณและผู้รับจ้าง เราเชื่อว่าคุณก็อยากได้คนที่มาทำงานให้คุณได้เร็วที่สุด',
+        'งานในแอพนี้มีความอิสระสูง มีทั้งงานง่ายสุดๆ ทำเอาสนุก ไปจนถึงงานที่ต้องใช้ความสามารถเฉพาะ ให้เลือกตามความถนัด และความต้องการได้แน่นอน ',
+        'เราพร้อมหางานที่ใกล้กับตัวคุณมากที่สุด ทำให้คุณไม่ต้องเสียเวลาเดินทางไกลๆ ให้คุณเอาเวลาไปทำงานอื่นเพิ่มดีกว่า',
+        'เราเชื่อว่ามีหลายงานที่เหมาะสมกับคุณ แต่ราคากลับไม่ถูกใจคุณ เราไม่อยากให้คุณและผู้จ้างเสียโอกาสที่จะทำงานดีๆไป คุณสามารถเสนอเงินที่ต้องการให้ผู้จ้างเพื่อพิจารณาต่อไปได้'
+      ]
+    }
+  }
+}
 </script>
 
 <style>

@@ -2,48 +2,61 @@
   <div>
     <v-card class="text-xs-center py-5 mt-5 blue-grad" flat tile outlined>
       <v-card-title class="justify-center">
-        <p
-          class="mb-1"
-          :style="{ color: 'white','font-family': 'DB Helvethaica X','font-weight': 750,'font-size':'70px'  }"
-        >รีวิวจากผู้ใช้งาน</p>
+        <client-only>
+          <div data-aos-once="true" data-aos="fade-down" data-aos-delay="200">
+            <p
+              class="mb-1"
+              :style="{ color: 'white','font-family': 'DB Helvethaica X','font-weight': 750,'font-size':'70px'  }"
+            >รีวิวจากผู้ใช้งาน</p>
+          </div>
+        </client-only>
       </v-card-title>
     </v-card>
     <v-layout row wrap justify-center>
       <v-flex xs11>
-        <v-layout row wrap>
-          <v-flex xs3 v-for="i in 4" :key="i">
-            <v-img
-              max-height="500"
-              contain
-              class="mt-5 mb-1"
-              :src="require('~/assets/photo/review/1.svg')"
-            />
-            <p
-              class="mb-0 text-center"
-              :style="{ color: '#443D3D','font-family': 'DB Helvethaica X','font-weight': 'bold','font-size':'30px'  }"
-            >หัวข้อ {{i}}</p>
-            <p
-              class="mb-1 text-center"
-              :style="{ color: '#443D3D','font-family': 'DB Helvethaica X','font-weight': 'normal','font-size':'30px'  }"
-            >รายละเอียด</p>
-          </v-flex>
-        </v-layout>
+        <client-only>
+          <div
+            data-aos-once="true"
+            data-aos="zoom-out"
+            data-aos-duration="700"
+            data-aos-delay="300"
+          >
+            <v-layout row wrap>
+              <v-flex xs3 v-for="i in 4" :key="i">
+                <v-img
+                  max-height="500"
+                  contain
+                  class="mt-5 mb-1"
+                  :src="require('~/assets/photo/review/1.svg')"
+                />
+                <p
+                  class="mb-0 text-center"
+                  :style="{ color: '#443D3D','font-family': 'DB Helvethaica X','font-weight': 'bold','font-size':'30px'  }"
+                >หัวข้อ {{i}}</p>
+                <p
+                  class="mb-1 text-center"
+                  :style="{ color: '#443D3D','font-family': 'DB Helvethaica X','font-weight': 'normal','font-size':'30px'  }"
+                >รายละเอียด</p>
+              </v-flex>
+            </v-layout>
+          </div>
+        </client-only>
       </v-flex>
       <v-flex xs12>
-        <p
-          class="mb-0 text-center"
-          :style="{ color: 'black','font-family': 'DB Helvethaica X','font-weight': 'bold','font-size':'70px'  }"
-        >ขณะนี้มีเควสเตอร์ในระบบทั้งหมด</p>
-        <p
-          class="mb-0 text-center"
-          :style="{ display:'inline',color: 'black','font-family': 'DB Helvethaica X','font-weight': 'bold','font-size':'70px'  }"
-        >
-          <client-only>
-            <div
-              data-aos-once="true"
-              data-aos="fade-up"
-              data-aos-id="currentQuest"
-              data-aos-delay="200"
+        <client-only>
+          <div
+            data-aos-once="true"
+            data-aos="fade-up"
+            data-aos-id="currentQuest"
+            data-aos-delay="300"
+          >
+            <p
+              class="mb-0 text-center"
+              :style="{ color: 'black','font-family': 'DB Helvethaica X','font-weight': 'bold','font-size':'70px'  }"
+            >ขณะนี้มีเควสเตอร์ในระบบทั้งหมด</p>
+            <p
+              class="mb-0 text-center"
+              :style="{ color: 'black','font-family': 'DB Helvethaica X','font-weight': 'bold','font-size':'70px'  }"
             >
               <ICountUp
                 class="iCountUp"
@@ -53,23 +66,18 @@
                 @ready="onReady"
               />
               {{' '}}คน
-            </div>
-          </client-only>
-        </p>
-        <p
-          class="mb-0 text-center"
-          :style="{ color: 'black','font-family': 'DB Helvethaica X','font-weight': 'bold','font-size':'70px'  }"
-        >และมีเควสที่สำเร็จไปแล้วทั้งหมด</p>
-        <p
-          class="mb-0 text-center"
-          :style="{ color: 'black','font-family': 'DB Helvethaica X','font-weight': 'bold','font-size':'70px'  }"
-        >
-          <client-only>
-            <div
-              data-aos-once="true"
-              data-aos="fade-up"
-              data-aos-id="doneQuest"
-              data-aos-delay="200"
+            </p>
+          </div>
+        </client-only>
+        <client-only>
+          <div data-aos-once="true" data-aos="fade-up" data-aos-id="doneQuest" data-aos-delay="300">
+            <p
+              class="mb-0 text-center"
+              :style="{ color: 'black','font-family': 'DB Helvethaica X','font-weight': 'bold','font-size':'70px'  }"
+            >และมีเควสที่สำเร็จไปแล้วทั้งหมด</p>
+            <p
+              class="mb-0 text-center"
+              :style="{ color: 'black','font-family': 'DB Helvethaica X','font-weight': 'bold','font-size':'70px'  }"
             >
               <ICountUp
                 :style="{ color: '#112D4E','line-height': '80%','font-family': 'DB Helvethaica X','font-weight': 'bold','font-size':'170px'  }"
@@ -79,9 +87,9 @@
                 @ready="onReady2"
               />
               {{' '}}เควส
-            </div>
-          </client-only>
-        </p>
+            </p>
+          </div>
+        </client-only>
       </v-flex>
     </v-layout>
   </div>
@@ -135,7 +143,6 @@ export default {
 
 <style scoped>
 .iCountUp {
-  display: inline;
   color: #3f72af;
   line-height: 80%;
   font-family: 'DB Helvethaica X';
