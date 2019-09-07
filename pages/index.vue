@@ -5,23 +5,23 @@
         <Intro />
       </v-flex>
     </v-layout>
-    <v-layout id="why" :style="{height:screenHeight}" row wrap justify-center align-start>
+    <v-layout id="why" row wrap justify-center align-start>
       <v-flex xs12 class="mt-5">
         <Why />
       </v-flex>
     </v-layout>
     <v-layout id="how" :style="{height:screenHeight}" row wrap justify-center align-start>
-      <v-flex xs12>
+      <v-flex xs12  class="mt-5">
         <How />
       </v-flex>
     </v-layout>
-    <v-layout id="news" :style="{height:screenHeight}" row wrap justify-center align-start>
-      <v-flex xs12>
+    <v-layout id="news" row wrap justify-center align-start>
+      <v-flex xs12  class="mt-5">
         <News />
       </v-flex>
     </v-layout>
     <v-layout id="what" :style="{height:screenHeight}" row wrap justify-center align-start>
-      <v-flex xs12>
+      <v-flex xs12  class="mt-5">
         <What />
       </v-flex>
     </v-layout>
@@ -31,9 +31,9 @@
       </v-flex>
     </v-layout>
     <v-layout id="contact" row wrap justify-center align-start>
-      <!-- <v-flex xs12>
+      <v-flex xs12>
         <Contact />
-      </v-flex> -->
+      </v-flex>
     </v-layout>
   </v-flex>
 </template>

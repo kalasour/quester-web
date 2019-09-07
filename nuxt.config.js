@@ -26,11 +26,11 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['aos/dist/aos.css'],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: "@/plugins/aos", ssr: false },'~/plugins/vue-scrollactive.js'],
+  plugins: [{ src: "@/plugins/aos", ssr: false },{ src: '~/plugins/vue-scrollactive.js'},{ src: '~/plugins/vue-countup-v2.js',ssr:false}],
   /*
    ** Nuxt.js dev-modules
    */

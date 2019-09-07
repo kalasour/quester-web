@@ -93,7 +93,7 @@
   -o-transition: opacity 0.25s ease-in-out;
   transition: opacity 0.25s ease-in-out;
   opacity: 1;
-  background: linear-gradient(45deg, #0d5ab2, #0f2f55);
+  background: linear-gradient(to bottom right, #0d5ab2, #0f2f55);
 }
 span:hover {
   cursor: pointer;
@@ -121,7 +121,7 @@ export default {
   },
   methods: {
     onItemChanged(event, currentItem, lastActiveItem) {
-      console.log(currentItem)
+      // console.log(currentItem)
     }
   }
 }
