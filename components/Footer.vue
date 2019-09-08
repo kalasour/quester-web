@@ -2,7 +2,11 @@
   <v-footer id="footer" light color="white" class="text-xs-center">
     <v-layout row justify-center wrap align-center>
       <v-flex class="my-5" xs12>
-        <v-img max-height="125" contain :src="require('../assets/logo/logo-dark.svg')" />
+        <v-img
+          max-height="125"
+          contain
+          :src="require('../assets/logo/logo-dark.svg')"
+        />
         <v-layout row wrap justify-center></v-layout>
       </v-flex>
       <v-flex class="my-5" xs12>
@@ -10,15 +14,33 @@
           <v-flex xs3>
             <v-layout row wrap justify-space-around>
               <v-flex xs2>
-                <v-img max-height="50" contain :src="require('../assets/logo/facebook.svg')" />
+                <v-img
+                  max-height="50"
+                  contain
+                  :src="require('../assets/logo/facebook.svg')"
+                />
               </v-flex>
-              <v-divider :style="{'border-left': '2px solid grey'}" vertical></v-divider>
+              <v-divider
+                :style="{ 'border-left': '2px solid grey' }"
+                vertical
+              ></v-divider>
               <v-flex xs2>
-                <v-img max-height="50" contain :src="require('../assets/logo/line.svg')" />
+                <v-img
+                  max-height="50"
+                  contain
+                  :src="require('../assets/logo/line.svg')"
+                />
               </v-flex>
-              <v-divider :style="{'border-left': '2px solid grey'}" vertical></v-divider>
+              <v-divider
+                :style="{ 'border-left': '2px solid grey' }"
+                vertical
+              ></v-divider>
               <v-flex xs2>
-                <v-img max-height="50" contain :src="require('../assets/logo/ig.svg')" />
+                <v-img
+                  max-height="50"
+                  contain
+                  :src="require('../assets/logo/ig.svg')"
+                />
               </v-flex>
             </v-layout>
           </v-flex>
@@ -31,20 +53,33 @@
               <v-flex xs4>
                 <v-layout column wrap justify-center>
                   <span
-                    v-for="(i,index) in itemsLeft"
+                    v-for="(i, index) in itemsLeft"
                     :key="index"
-                    :style="{ color: '#112D4E','font-family': i.font,'font-size':'23px' }"
-                  >{{i.text}}</span>
+                    :style="{
+                      color: '#112D4E',
+                      'font-family': i.font,
+                      'font-size': '23px'
+                    }"
+                    >{{ i.text }}</span
+                  >
                 </v-layout>
               </v-flex>
-              <v-divider :style="{'border-left': '1px solid #112D4E'}" vertical></v-divider>
+              <v-divider
+                :style="{ 'border-left': '1px solid #112D4E' }"
+                vertical
+              ></v-divider>
               <v-flex xs4>
                 <v-layout column wrap justify-center>
                   <span
-                    v-for="(i,index) in itemsRight"
+                    v-for="(i, index) in itemsRight"
                     :key="index"
-                    :style="{ color: '#112D4E','font-family': i.font,'font-size':'22px' }"
-                  >{{i.text}}</span>
+                    :style="{
+                      color: '#112D4E',
+                      'font-family': i.font,
+                      'font-size': '22px'
+                    }"
+                    >{{ i.text }}</span
+                  >
                 </v-layout>
               </v-flex>
             </v-layout>
@@ -68,8 +103,13 @@
         <v-layout row wrap justify-center>
           <span
             class="no"
-            :style="{ color: '#112D4E','font-family': 'SF Pro Display','font-weight': 350 }"
-          >Copyright &copy; 2019 Quester co., ltd All rights reserved</span>
+            :style="{
+              color: '#112D4E',
+              'font-family': 'SF Pro Display',
+              'font-weight': 350
+            }"
+            >Copyright &copy; 2019 Quester co., ltd All rights reserved</span
+          >
         </v-layout>
       </v-flex>
     </v-layout>

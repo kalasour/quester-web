@@ -6,8 +6,15 @@
           <div data-aos-once="true" data-aos="fade-down" data-aos-delay="200">
             <p
               class="mb-1"
-              :style="{ color: 'white','font-family': 'DB Helvethaica X','font-weight': 750,'font-size':'70px'  }"
-            >รีวิวจากผู้ใช้งาน</p>
+              :style="{
+                color: 'white',
+                'font-family': 'DB Helvethaica X',
+                'font-weight': 750,
+                'font-size': '70px'
+              }"
+            >
+              รีวิวจากผู้ใช้งาน
+            </p>
           </div>
         </client-only>
       </v-card-title>
@@ -22,7 +29,7 @@
             data-aos-delay="300"
           >
             <v-layout row wrap>
-              <v-flex xs3 v-for="i in 4" :key="i">
+              <v-flex v-for="i in 4" :key="i" xs3>
                 <v-img
                   max-height="500"
                   contain
@@ -31,12 +38,26 @@
                 />
                 <p
                   class="mb-0 text-center"
-                  :style="{ color: '#443D3D','font-family': 'DB Helvethaica X','font-weight': 'bold','font-size':'30px'  }"
-                >หัวข้อ {{i}}</p>
+                  :style="{
+                    color: '#443D3D',
+                    'font-family': 'DB Helvethaica X',
+                    'font-weight': 'bold',
+                    'font-size': '30px'
+                  }"
+                >
+                  หัวข้อ {{ i }}
+                </p>
                 <p
                   class="mb-1 text-center"
-                  :style="{ color: '#443D3D','font-family': 'DB Helvethaica X','font-weight': 'normal','font-size':'30px'  }"
-                >รายละเอียด</p>
+                  :style="{
+                    color: '#443D3D',
+                    'font-family': 'DB Helvethaica X',
+                    'font-weight': 'normal',
+                    'font-size': '30px'
+                  }"
+                >
+                  รายละเอียด
+                </p>
               </v-flex>
             </v-layout>
           </div>
@@ -52,41 +73,76 @@
           >
             <p
               class="mb-0 text-center"
-              :style="{ color: 'black','font-family': 'DB Helvethaica X','font-weight': 'bold','font-size':'70px'  }"
-            >ขณะนี้มีเควสเตอร์ในระบบทั้งหมด</p>
+              :style="{
+                color: 'black',
+                'font-family': 'DB Helvethaica X',
+                'font-weight': 'bold',
+                'font-size': '70px'
+              }"
+            >
+              ขณะนี้มีเควสเตอร์ในระบบทั้งหมด
+            </p>
             <p
               class="mb-0 text-center"
-              :style="{ color: 'black','font-family': 'DB Helvethaica X','font-weight': 'bold','font-size':'70px'  }"
+              :style="{
+                color: 'black',
+                'font-family': 'DB Helvethaica X',
+                'font-weight': 'bold',
+                'font-size': '70px'
+              }"
             >
               <ICountUp
                 class="iCountUp"
                 :delay="delay"
-                :endVal="currentQuester"
+                :end-val="currentQuester"
                 :options="options"
                 @ready="onReady"
               />
-              {{' '}}คน
+              {{ ' ' }}คน
             </p>
           </div>
         </client-only>
         <client-only>
-          <div data-aos-once="true" data-aos="fade-up" data-aos-id="doneQuest" data-aos-delay="300">
+          <div
+            data-aos-once="true"
+            data-aos="fade-up"
+            data-aos-id="doneQuest"
+            data-aos-delay="300"
+          >
             <p
               class="mb-0 text-center"
-              :style="{ color: 'black','font-family': 'DB Helvethaica X','font-weight': 'bold','font-size':'70px'  }"
-            >และมีเควสที่สำเร็จไปแล้วทั้งหมด</p>
+              :style="{
+                color: 'black',
+                'font-family': 'DB Helvethaica X',
+                'font-weight': 'bold',
+                'font-size': '70px'
+              }"
+            >
+              และมีเควสที่สำเร็จไปแล้วทั้งหมด
+            </p>
             <p
               class="mb-0 text-center"
-              :style="{ color: 'black','font-family': 'DB Helvethaica X','font-weight': 'bold','font-size':'70px'  }"
+              :style="{
+                color: 'black',
+                'font-family': 'DB Helvethaica X',
+                'font-weight': 'bold',
+                'font-size': '70px'
+              }"
             >
               <ICountUp
-                :style="{ color: '#112D4E','line-height': '80%','font-family': 'DB Helvethaica X','font-weight': 'bold','font-size':'170px'  }"
+                :style="{
+                  color: '#112D4E',
+                  'line-height': '80%',
+                  'font-family': 'DB Helvethaica X',
+                  'font-weight': 'bold',
+                  'font-size': '170px'
+                }"
                 :delay="delay"
-                :endVal="doneQuest"
+                :end-val="doneQuest"
                 :options="options"
                 @ready="onReady2"
               />
-              {{' '}}เควส
+              {{ ' ' }}เควส
             </p>
           </div>
         </client-only>
@@ -95,22 +151,8 @@
   </div>
 </template>
 
-<script >
+<script>
 export default {
-  mounted() {
-    this.$nextTick(() => {
-      document.addEventListener('aos:in:currentQuest', ({ detail }) => {
-        this.instanceCurrentQuest == null
-          ? (this.currentQuester = 200000)
-          : this.instanceCurrentQuest.update(200000)
-      })
-      document.addEventListener('aos:in:doneQuest', ({ detail }) => {
-        this.instanceDoneQuest == null
-          ? (this.doneQuest = 1000000)
-          : this.instanceDoneQuest.update(1000000)
-      })
-    })
-  },
   data() {
     return {
       delay: 0,
@@ -128,12 +170,26 @@ export default {
       }
     }
   },
+  mounted() {
+    this.$nextTick(() => {
+      document.addEventListener('aos:in:currentQuest', ({ detail }) => {
+        this.instanceCurrentQuest == null
+          ? (this.currentQuester = 200000)
+          : this.instanceCurrentQuest.update(200000)
+      })
+      document.addEventListener('aos:in:doneQuest', ({ detail }) => {
+        this.instanceDoneQuest == null
+          ? (this.doneQuest = 1000000)
+          : this.instanceDoneQuest.update(1000000)
+      })
+    })
+  },
   methods: {
-    onReady: function(instance, CountUp) {
+    onReady(instance, CountUp) {
       const that = this
       this.instanceCurrentQuest = instance
     },
-    onReady2: function(instance, CountUp) {
+    onReady2(instance, CountUp) {
       const that = this
       this.instanceDoneQuest = instance
     }
