@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Navbar />
-    <v-content :style="{'background-color':'#FAFAFA'}">
+    <v-content :style="{ 'background-color': '#FAFAFA' }">
       <v-layout class="py-0">
         <nuxt />
       </v-layout>
@@ -10,8 +10,8 @@
   </v-app>
 </template>
 <script>
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
 export default {
   components: {
     Footer,
@@ -38,11 +38,11 @@ export default {
       right: true,
       rightDrawer: false,
       title: 'Vuetify.js'
-    }
+    };
   }
-}
+};
 </script>
-<style >
+<style>
 .blue-grad {
   background-image: linear-gradient(to bottom right, #0d5ab2, #0f2f55);
 }

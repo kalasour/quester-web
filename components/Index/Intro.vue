@@ -6,32 +6,75 @@
           <div data-aos="fade-right" data-aos-delay="500">
             <p
               class="display-2"
-              :style="{ 'font-family': 'SF Pro Display','font-weight':700, 'color':'#112D4E' }"
-            >REAL QUEST</p>
+              :style="{
+                'font-family': 'SF Pro Display',
+                'font-weight': 700,
+                color: '#112D4E'
+              }"
+            >
+              REAL QUEST
+            </p>
             <p
               class="display-2 mb-3"
-              :style="{ 'font-family': 'SF Pro Display','font-weight':700, 'color':'#112D4E' }"
-            >IN REAL LIFE</p>
+              :style="{
+                'font-family': 'SF Pro Display',
+                'font-weight': 700,
+                color: '#112D4E'
+              }"
+            >
+              IN REAL LIFE
+            </p>
             <p
               class="subtitle-1 mt-2"
-              :style="{ 'font-family': 'SF Pro Display','font-weight':300, 'color':'grey' }"
-            >Lorem ipsum dolor sit amet, consectetur</p>
+              :style="{
+                'font-family': 'SF Pro Display',
+                'font-weight': 300,
+                color: 'grey'
+              }"
+            >
+              Lorem ipsum dolor sit amet, consectetur
+            </p>
             <p
               class="subtitle-1"
-              :style="{ 'font-family': 'SF Pro Display','font-weight':300, 'color':'grey' }"
-            >adipiscing elit. Suspendisse a felis felis. Aliquam</p>
+              :style="{
+                'font-family': 'SF Pro Display',
+                'font-weight': 300,
+                color: 'grey'
+              }"
+            >
+              adipiscing elit. Suspendisse a felis felis. Aliquam
+            </p>
             <p
               class="subtitle-1"
-              :style="{ 'font-family': 'SF Pro Display','font-weight':300, 'color':'grey' }"
-            >erat volutpat. Duis tincidunt pretium odio, et</p>
+              :style="{
+                'font-family': 'SF Pro Display',
+                'font-weight': 300,
+                color: 'grey'
+              }"
+            >
+              erat volutpat. Duis tincidunt pretium odio, et
+            </p>
             <p
               class="subtitle-1"
-              :style="{ 'font-family': 'SF Pro Display','font-weight':300, 'color':'grey' }"
-            >vestibulum elit molestie ut.</p>
+              :style="{
+                'font-family': 'SF Pro Display',
+                'font-weight': 300,
+                color: 'grey'
+              }"
+            >
+              vestibulum elit molestie ut.
+            </p>
           </div>
         </client-only>
       </v-layout>
-      <v-layout data-aos="fade-left" data-aos-delay="500" class="mt-5" row wrap justify-center>
+      <v-layout
+        data-aos="fade-left"
+        data-aos-delay="500"
+        class="mt-5"
+        row
+        wrap
+        justify-center
+      >
         <v-flex xs4>
           <v-img :src="require('~/assets/logo/app-store.svg')" />
         </v-flex>
@@ -50,7 +93,11 @@
         :style="{position:'absolute',left:'45%',top:'5%'
             }"
           />-->
-          <v-img max-height="500" contain :src="require('~/assets/photo/phone_2.svg')" />
+          <v-img
+            max-height="500"
+            contain
+            :src="require('~/assets/photo/phone_2.svg')"
+          />
         </div>
       </client-only>
     </v-flex>
@@ -58,7 +105,7 @@
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style scoped>

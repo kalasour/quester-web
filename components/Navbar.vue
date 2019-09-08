@@ -13,11 +13,22 @@
         >Quester</span>-->
       </v-toolbar-title>
       <div class="flex-grow-1"></div>
-      <scrollactive v-on:itemchanged="onItemChanged">
-        <v-btn text v-for="(item,index) in items" :key="index" @click="$vuetify.goTo(item.id)">
+      <scrollactive @itemchanged="onItemChanged">
+        <v-btn
+          v-for="(item, index) in items"
+          :key="index"
+          text
+          @click="$vuetify.goTo(item.id)"
+        >
           <span
-            :style="{ 'font-family': item.font ,'font-size':'28px' ,'color':'#0F2F55','font-weight':650}"
-          >{{item.text}}</span>
+            :style="{
+              'font-family': item.font,
+              'font-size': '28px',
+              color: '#0F2F55',
+              'font-weight': 650
+            }"
+            >{{ item.text }}</span
+          >
         </v-btn>
       </scrollactive>
     </v-app-bar>
@@ -34,19 +45,25 @@
         >Quester</span>-->
       </v-toolbar-title>
       <div class="flex-grow-1"></div>
-      <scrollactive v-on:itemchanged="onItemChanged">
+      <scrollactive @itemchanged="onItemChanged">
         <!-- <a href="#why" class="scrollactive-item">Home</a> -->
         <v-btn
+          v-for="(item, index) in items"
+          :key="index"
           class="scrollactive-item"
           :href="item.id"
           text
-          v-for="(item,index) in items"
-          :key="index"
           @click="$vuetify.goTo(item.id)"
         >
           <span
-            :style="{ 'font-family': item.font ,'font-size':'28px' ,'color':'#FAFAFA','font-weight':650}"
-          >{{item.text}}</span>
+            :style="{
+              'font-family': item.font,
+              'font-size': '28px',
+              color: '#FAFAFA',
+              'font-weight': 650
+            }"
+            >{{ item.text }}</span
+          >
         </v-btn>
       </scrollactive>
     </v-app-bar>
@@ -117,12 +134,12 @@ export default {
         { text: 'ข้อคิดเห็น', font: 'DB Helvethaica X', id: '#comment' },
         { text: 'ติดต่อเรา', font: 'DB Helvethaica X', id: '#contact' }
       ]
-    }
+    };
   },
   methods: {
     onItemChanged(event, currentItem, lastActiveItem) {
       // console.log(currentItem)
     }
   }
-}
+};
 </script>
