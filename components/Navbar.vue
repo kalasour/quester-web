@@ -8,7 +8,35 @@
         >Quester</span>-->
       </v-toolbar-title>
       <div class="flex-grow-1"></div>
-      <scrollactive @itemchanged="onItemChanged">
+      <v-app-bar-nav-icon class="primary--text hidden-lg-and-up" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <scrollactive class="hidden-md-and-down" v-on:itemchanged="onItemChanged">
+        <v-btn text v-for="(item,index) in items" :key="index" @click="$vuetify.goTo(item.id)">
+          <span
+            :style="{
+              'font-family': item.font,
+              'font-size': '28px',
+              color: '#0F2F55',
+              'font-weight': 650
+            }"
+          >{{ item.text }}</span>
+        </v-btn>
+      </scrollactive>
+    </v-app-bar>
+    <v-app-bar fixed class="py-1 pr-5 custom-nav" color="#FAFAFA" dark>
+      <v-img
+        max-width="100"
+        max-height="50"
+        contain
+        :src="require('~/assets/logo/quester-logo-trans.svg')"
+      />
+      <v-toolbar-title>
+        <!-- <span
+          :style="{ 'font-family': 'SF Pro Display','font-weight': 750,'font-size':'30px','color':'#112D4E' }"
+        >Quester</span>-->
+      </v-toolbar-title>
+      <div class="flex-grow-1"></div>
+      <v-app-bar-nav-icon class="hidden-lg-and-up" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <scrollactive class="hidden-md-and-down" v-on:itemchanged="onItemChanged">
         <!-- <a href="#why" class="scrollactive-item">Home</a> -->
         <v-btn
           v-for="(item, index) in items"
@@ -29,6 +57,24 @@
         </v-btn>
       </scrollactive>
     </v-app-bar>
+    <v-navigation-drawer class="blue-grad" fixed v-model="drawer" right temporary>
+      <v-list nav dense>
+        <scrollactive v-on:itemchanged="onItemChanged">
+          <v-list-item
+            @click="$vuetify.goTo(item.id); drawer=false"
+            v-for="(item,index) in items"
+            :key="index"
+            link
+          >
+            <v-btn class="scrollactive-item" :href="item.id" text>
+              <span
+                :style="{ 'font-family': item.font ,'font-size':'28px' ,'color':'#FAFAFA','font-weight':650}"
+              >{{item.text}}</span>
+            </v-btn>
+          </v-list-item>
+        </scrollactive>
+      </v-list>
+    </v-navigation-drawer>
   </div>
 </template>
 <style scoped>
@@ -78,6 +124,7 @@ export default {
   components: {},
   data() {
     return {
+      drawer: false,
       items: [
         { text: 'เกี่ยวกับเรา', font: 'DB Helvethaica X Bd', id: '#index' },
         { text: 'Why Quester?', font: 'DB Helvethaica X Bd', id: '#why' },

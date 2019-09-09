@@ -163,6 +163,20 @@ export default {
       });
     });
   },
+  mounted() {
+    this.$nextTick(() => {
+      document.addEventListener('aos:in:currentQuest', ({ detail }) => {
+        this.instanceCurrentQuest == null
+          ? (this.currentQuester = 200000)
+          : this.instanceCurrentQuest.update(200000);
+      });
+      document.addEventListener('aos:in:doneQuest', ({ detail }) => {
+        this.instanceDoneQuest == null
+          ? (this.doneQuest = 1000000)
+          : this.instanceDoneQuest.update(1000000);
+      });
+    });
+  },
   methods: {
     onReady(instance, CountUp) {
       this.instanceCurrentQuest = instance;
