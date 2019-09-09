@@ -1,13 +1,7 @@
 <template>
-  <v-flex xs12>
-    <v-layout
-      id="index"
-      :style="{ height: screenHeight }"
-      row
-      wrap
-      justify-center
-      align-center
-    >
+  <div :style="{'width':'100%'}">
+    <v-layout :style="{'height':'50px'}"></v-layout>
+    <v-layout id="index" row wrap justify-center align-center>
       <v-flex xs8>
         <Intro />
       </v-flex>
@@ -33,10 +27,9 @@
       </v-flex>
     </v-layout>
     <v-layout
-      id="comment"
       :style="{ height: screenHeight }"
       class="blue-grad-bot"
-      row
+      id="comment"
       wrap
       justify-center
       align-start
@@ -50,7 +43,7 @@
         <!-- <Contact /> -->
       </v-flex>
     </v-layout>
-  </v-flex>
+  </div>
 </template>
 
 <script>

@@ -1,24 +1,17 @@
 <template>
-  <client-only>
+  <div>
     <v-layout row wrap justify-center>
       <v-flex xs12>
-        <div
-          data-aos-once="true"
-          data-aos-duration="700"
-          data-aos="fade-down"
-          data-aos-delay="400"
-        >
+        <div data-aos-once="true" data-aos-duration="700" data-aos="fade-down" data-aos-delay="400">
           <p
             class="text-center mt-5"
             :style="{
               color: 'white',
-              'font-family': 'DB Helvethaica X',
+              'font-family': 'DB Helvethaica X Bd',
               'font-weight': 750,
               'font-size': '50px'
             }"
-          >
-            สร้างเควสของคุณวันนี้ เพื่อความสะดวกสบายในชีวิต โหลดเลย
-          </p>
+          >สร้างเควสของคุณวันนี้ เพื่อความสะดวกสบายในชีวิต โหลดเลย</p>
         </div>
       </v-flex>
       <v-flex xs12 class="mt-3 mb-5">
@@ -46,60 +39,41 @@
         </v-layout>
       </v-flex>
       <v-flex xs12>
-        <div
-          data-aos-once="true"
-          data-aos-duration="700"
-          data-aos="zoom-in"
-          data-aos-delay="400"
-        >
+        <div data-aos-once="true" data-aos-duration="700" data-aos="zoom-in" data-aos-delay="400">
           <p
             class="text-center mt-5 mb-0"
             :style="{
               color: 'white',
               'line-height': '80%',
-              'font-family': 'DB Helvethaica X',
+              'font-family': 'DB Helvethaica X Bd',
               'font-weight': 350,
               'font-size': '50px'
             }"
-          >
-            เพิ่มข้อคิดเห็น
-          </p>
+          >เพิ่มข้อคิดเห็น</p>
         </div>
       </v-flex>
       <v-flex xs12>
-        <div
-          data-aos-once="true"
-          data-aos-duration="700"
-          data-aos="zoom-in"
-          data-aos-delay="400"
-        >
+        <div data-aos-once="true" data-aos-duration="700" data-aos="zoom-in" data-aos-delay="400">
           <p
             class="text-center mt-0"
             :style="{
               color: 'white',
-              'font-family': 'DB Helvethaica X',
+              'font-family': 'DB Helvethaica X Bd',
               'font-weight': 150,
               'font-size': '32px'
             }"
-          >
-            เพื่อไปสู่การเป็นแอปพลิเคชันที่ดีที่สุดของทุกคน
-          </p>
+          >เพื่อไปสู่การเป็นแอปพลิเคชันที่ดีที่สุดของทุกคน</p>
         </div>
       </v-flex>
       <v-flex xs6 align-self-end>
-        <div
-          data-aos-once="true"
-          data-aos-duration="700"
-          data-aos="zoom-in"
-          data-aos-delay="400"
-        >
+        <div data-aos-once="true" data-aos-duration="700" data-aos="zoom-in" data-aos-delay="400">
           <v-text-field
             dark
             type="email"
             color="grey"
             :style="{
               color: 'white',
-              'font-family': 'DB Helvethaica X',
+              'font-family': 'DB Helvethaica X Bd',
               'font-weight': 350,
               'font-size': '26px'
             }"
@@ -116,7 +90,7 @@
             :style="{
               'border-bottom': '1px solid red',
               color: 'white',
-              'font-family': 'DB Helvethaica X',
+              'font-family': 'DB Helvethaica X Bd',
               'font-weight': 350,
               'font-size': '22px'
             }"
@@ -127,7 +101,7 @@
             <v-btn
               :style="{
                 color: 'white',
-                'font-family': 'DB Helvethaica X',
+                'font-family': 'DB Helvethaica X Bd',
                 'font-weight': 350,
                 'font-size': '22px'
               }"
@@ -135,13 +109,12 @@
               class="mt-5"
               rounded
               outlined
-              >ส่งข้อคิดเห็น</v-btn
-            >
+            >ส่งข้อคิดเห็น</v-btn>
           </v-layout>
         </div>
       </v-flex>
     </v-layout>
-  </client-only>
+  </div>
 </template>
 
 <script>

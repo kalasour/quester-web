@@ -3,209 +3,156 @@
     <v-card class="text-xs-center py-5 blue-grad mt-5" tile outlined>
       <v-card-title class="justify-center">
         <div data-aos="fade-bottom" data-aos-delay="200" data-aos-once="true">
-          <span
+          <p
+            class="text-center"
             :style="{
               color: 'white',
-              'font-family': 'DB Helvethaica X',
-              'font-weight': 750,
-              'font-size': '40px'
+              'font-family': 'DB Helvethaica X Bd',
+              'font-size': '2em'
             }"
-          >
-            จะดีกว่าไหม ถ้าคุณจะได้เป็นทั้งผู้รับจ้างและจ้างเองในเวลาเดียวกัน
-          </span>
+          >จะดีกว่าไหม ถ้าคุณจะได้เป็นทั้งผู้รับจ้างและจ้างเองในเวลาเดียวกัน</p>
         </div>
       </v-card-title>
     </v-card>
-    <v-layout row wrap fill-height align-center>
-      <v-flex xs5>
-        <client-only>
-          <div
-            data-aos-once="true"
-            data-aos="fade-up"
-            data-aos-id="label1"
-            data-aos-delay="200"
-          >
-            <p
-              class="text-center mb-0"
-              :style="{
+    <v-row class="d-flex align-center">
+      <v-col md="6" sm="12">
+        <div data-aos-once="true" data-aos="fade-up" data-aos-id="label1" data-aos-delay="200">
+          <p
+            class="text-center mb-0"
+            :style="{
                 color: '#0f2f55',
-                'font-family': 'DB Helvethaica X',
+                'font-family': 'DB Helvethaica X Bd',
                 'font-weight': 750,
                 'font-size': '40px'
               }"
-            >
-              จ้างคนมาทําอะไรให้ก็ได้
-            </p>
-            <p
-              class="text-center mb-0"
-              :style="{
+          >จ้างคนมาทําอะไรให้ก็ได้</p>
+          <p
+            class="text-center mb-0"
+            :style="{
                 color: '#0f2f55',
-                'font-family': 'DB Helvethaica X',
+                'font-family': 'DB Helvethaica X Bd',
                 'font-weight': 750,
                 'font-size': '40px'
               }"
-            >
-              เพียงแค่สร้าง "เควส"
-            </p>
-            <p
-              class="text-center mb-0"
-              :style="{
+          >เพียงแค่สร้าง "เควส"</p>
+          <p
+            class="text-center mb-0"
+            :style="{
                 color: '#0f2f55',
-                'font-family': 'DB Helvethaica X',
+                'font-family': 'DB Helvethaica X Bd',
                 'font-weight': 750,
                 'font-size': '40px'
               }"
-            >
-              เพื่อหาผู้ที่จะทําเควสให้คุณได้สําเร็จ
-            </p>
-          </div>
-        </client-only>
-      </v-flex>
-      <client-only>
-        <v-flex
-          xs7
-          align-self-end
-          class="my-3"
-          data-aos-once="true"
-          data-aos="fade-left"
-          data-aos-delay="200"
-        >
-          <v-img contain :src="require('~/assets/photo/sushi.svg')" />
-        </v-flex>
-      </client-only>
-      <client-only>
-        <v-flex
-          xs7
-          class="my-3"
-          data-aos="fade-right"
-          data-aos-once="true"
-          data-aos-delay="200"
-        >
-          <v-img contain :src="require('~/assets/photo/sushi.svg')" />
-        </v-flex>
-      </client-only>
-      <v-flex xs5>
-        <client-only>
-          <div
-            data-aos-once="true"
-            data-aos="fade-up"
-            data-aos-id="label2"
-            data-aos-delay="200"
-          >
-            <p
-              class="text-center mb-0"
-              :style="{
+          >เพื่อหาผู้ที่จะทําเควสให้คุณได้สําเร็จ</p>
+        </div>
+      </v-col>
+      <v-col
+        md="6"
+        sm="12"
+        class="my-3 align-self-end"
+        data-aos-once="true"
+        data-aos="fade-left"
+        data-aos-delay="200"
+      >
+        <v-img contain :src="require('~/assets/photo/sushi.svg')" />
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col
+        md="6"
+        sm="12"
+        class="my-3"
+        data-aos="fade-right"
+        data-aos-once="true"
+        data-aos-delay="200"
+      >
+        <v-img contain :src="require('~/assets/photo/sushi.svg')" />
+      </v-col>
+      <v-col md="6" sm="12" class="d-flex justify-center align-center">
+        <div data-aos-once="true" data-aos="fade-up" data-aos-id="label2" data-aos-delay="200">
+          <p
+            class="text-center mb-0"
+            :style="{
                 color: '#0f2f55',
-                'font-family': 'DB Helvethaica X',
+                'font-family': 'DB Helvethaica X Bd',
                 'font-weight': 750,
                 'font-size': '40px'
               }"
-            >
-              รับงานที่อยู่ในรูปแบบ"เควส"
-            </p>
-            <p
-              class="text-center mb-0"
-              :style="{
+          >รับงานที่อยู่ในรูปแบบ"เควส"</p>
+          <p
+            class="text-center mb-0"
+            :style="{
                 color: '#0f2f55',
-                'font-family': 'DB Helvethaica X',
+                'font-family': 'DB Helvethaica X Bd',
                 'font-weight': 750,
                 'font-size': '40px'
               }"
-            >
-              สนุกเหมือนได้เล่นเกม แต่ได้เงินจริง!
-            </p>
-          </div>
-        </client-only>
-      </v-flex>
-    </v-layout>
+          >สนุกเหมือนได้เล่นเกม แต่ได้เงินจริง!</p>
+        </div>
+      </v-col>
+    </v-row>
+
     <v-card class="text-xs-center py-5 mt-2 blue-grad" flat tile outlined>
       <v-card-title class="justify-center">
         <client-only>
           <div data-aos-once="true" data-aos="fade-down" data-aos-delay="200">
             <p
-              class="mb-1"
+              class="mb-1 text-center"
               :style="{
                 color: 'white',
-                'font-family': 'DB Helvethaica X',
-                'font-weight': 750,
-                'font-size': '70px'
+                'font-family': 'DB Helvethaica X Bd',
+                'font-size': '2em'
               }"
-            >
-              อิสรภาพในการจ้างงาน
-            </p>
+            >อิสรภาพในการจ้างงาน</p>
           </div>
         </client-only>
       </v-card-title>
     </v-card>
-    <v-layout
-      row
-      wrap
-      justify-center
-      class="pb-3"
-      :style="{ 'border-bottom': '2px solid grey' }"
-    >
+    <v-layout row wrap justify-center class="pb-3" :style="{ 'border-bottom': '2px solid grey' }">
       <v-flex xs10>
-        <client-only>
-          <div
-            data-aos-once="true"
-            data-aos="zoom-out"
-            data-aos-duration="700"
-            data-aos-delay="300"
-          >
-            <v-layout row wrap>
-              <v-flex v-for="i in 3" :key="i" xs4>
-                <v-img
-                  max-height="300"
-                  min-height="300"
-                  contain
-                  class="mt-5 mb-1"
-                  :src="require(`~/assets/photo/freedom/${i}.svg`)"
-                />
-              </v-flex>
-            </v-layout>
-          </div>
-        </client-only>
-      </v-flex>
-      <v-flex xs10>
-        <client-only>
-          <div
-            data-aos-once="true"
-            data-aos="zoom-out"
-            data-aos-duration="700"
-            data-aos-delay="300"
-          >
-            <v-layout row wrap>
-              <v-flex v-for="i in 3" :key="i" xs4>
-                <p
-                  class="mb-3 text-center"
-                  :style="{
+        <v-row class="d-flex justify-center">
+          <v-col v-for="i in 3" :key="i" md="4" sm="12" class="align-self-start">
+            <div
+              data-aos-once="true"
+              data-aos="zoom-out"
+              data-aos-duration="700"
+              data-aos-delay="300"
+            >
+              <v-img
+                height="300"
+                contain
+                class="mt-5 mb-1"
+                :src="require(`~/assets/photo/freedom/${i}.svg`)"
+              />
+
+              <p
+                class="py-3 text-center"
+                :style="{
                     color: '#0F2F55',
                     'line-height': '80%',
-                    'font-family': 'DB Helvethaica X',
+                    'font-family': 'DB Helvethaica X Bd',
                     'font-weight': 'bold',
-                    'font-size': '70px'
+                    'font-size': '3em'
                   }"
-                >
-                  {{ heads[i - 1] }}
-                </p>
-                <p
-                  class="mb-1 text-center px-5"
-                  :style="{
+              >{{ heads[i - 1] }}</p>
+              <p
+                class="mb-1 text-center px-5"
+                :style="{
                     color: '#0F2F55',
-                    'font-family': 'DB Helvethaica X',
+                    'font-family': 'DB Helvethaica X Bd',
                     'font-weight': 'normal',
                     'font-size': '24px'
                   }"
-                >
-                  {{ details[i - 1] }}
-                </p>
-              </v-flex>
-            </v-layout>
-          </div>
-        </client-only>
+              >{{ details[i - 1] }}</p>
+            </div>
+          </v-col>
+        </v-row>
+      </v-flex>
+      <v-flex xs10>
+        <client-only></client-only>
       </v-flex>
     </v-layout>
-    <v-card class="text-xs-center py-5 mt-0" color="white" tile>
+    <v-card class="text-xs-center py-5" color="white" tile>
       <v-card-title class="justify-center">
         <client-only>
           <div data-aos-once="true" data-aos="fade-down" data-aos-delay="200">
@@ -213,79 +160,53 @@
               class="mb-1"
               :style="{
                 color: '#112D4E',
-                'font-family': 'DB Helvethaica X',
-                'font-weight': 750,
-                'font-size': '70px'
+                'font-family': 'DB Helvethaica X Bd',
+                'font-size': '2em'
               }"
-            >
-              อิสรภาพในการทำงาน
-            </p>
+            >อิสรภาพในการทำงาน</p>
           </div>
         </client-only>
       </v-card-title>
     </v-card>
-    <v-layout class="sky-grad pb-5" row wrap justify-center>
-      <v-flex xs10>
-        <client-only>
+    <div class="sky-grad">
+      <v-row class="d-flex justify-center pa-10">
+        <v-col v-for="i in 3" :key="i" md="4" sm="12">
           <div
             data-aos-once="true"
             data-aos="zoom-out"
             data-aos-duration="700"
             data-aos-delay="300"
           >
-            <v-layout row wrap>
-              <v-flex v-for="i in 3" :key="i" xs4>
-                <v-img
-                  max-height="300"
-                  min-height="300"
-                  contain
-                  class="mt-5 mb-1"
-                  :src="require(`~/assets/photo/freedom/${i + 3}.svg`)"
-                />
-              </v-flex>
-            </v-layout>
-          </div>
-        </client-only>
-      </v-flex>
-      <v-flex xs10>
-        <client-only>
-          <div
-            data-aos-once="true"
-            data-aos="zoom-out"
-            data-aos-duration="700"
-            data-aos-delay="300"
-          >
-            <v-layout row wrap>
-              <v-flex v-for="i in 3" :key="i" xs4>
-                <p
-                  class="mb-3 text-center"
-                  :style="{
+            <v-img
+              max-height="300"
+              min-height="300"
+              contain
+              class="mt-5 mb-1"
+              :src="require(`~/assets/photo/freedom/${i + 3}.svg`)"
+            />
+            <p
+              class="mb-3 text-center"
+              :style="{
                     color: 'white',
                     'line-height': '80%',
-                    'font-family': 'DB Helvethaica X',
+                    'font-family': 'DB Helvethaica X Bd',
                     'font-weight': 'bold',
-                    'font-size': '70px'
+                    'font-size': '3em'
                   }"
-                >
-                  {{ heads[i + 2] }}
-                </p>
-                <p
-                  class="mb-1 text-center px-5"
-                  :style="{
+            >{{ heads[i + 2] }}</p>
+            <p
+              class="mb-1 text-center px-5"
+              :style="{
                     color: 'white',
-                    'font-family': 'DB Helvethaica X',
+                    'font-family': 'DB Helvethaica X Bd',
                     'font-weight': 'normal',
                     'font-size': '24px'
                   }"
-                >
-                  {{ details[i + 2] }}
-                </p>
-              </v-flex>
-            </v-layout>
+            >{{ details[i + 2] }}</p>
           </div>
-        </client-only>
-      </v-flex>
-    </v-layout>
+        </v-col>
+      </v-row>
+    </div>
   </div>
 </template>
 

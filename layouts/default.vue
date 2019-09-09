@@ -2,7 +2,7 @@
   <v-app>
     <Navbar />
     <v-content :style="{ 'background-color': '#FAFAFA' }">
-      <v-layout class="py-0">
+      <v-layout>
         <nuxt />
       </v-layout>
     </v-content>

@@ -8,13 +8,11 @@
               class="mb-1"
               :style="{
                 color: 'white',
-                'font-family': 'DB Helvethaica X',
+                'font-family': 'DB Helvethaica X Bd',
                 'font-weight': 750,
                 'font-size': '70px'
               }"
-            >
-              รีวิวจากผู้ใช้งาน
-            </p>
+            >รีวิวจากผู้ใช้งาน</p>
           </div>
         </client-only>
       </v-card-title>
@@ -28,8 +26,8 @@
             data-aos-duration="700"
             data-aos-delay="300"
           >
-            <v-layout row wrap>
-              <v-flex v-for="i in 4" :key="i" xs3>
+            <v-row>
+              <v-col v-for="i in 4" :key="i" md="3" sm="4">
                 <v-img
                   max-height="500"
                   contain
@@ -40,26 +38,22 @@
                   class="mb-0 text-center"
                   :style="{
                     color: '#443D3D',
-                    'font-family': 'DB Helvethaica X',
+                    'font-family': 'DB Helvethaica X Bd',
                     'font-weight': 'bold',
                     'font-size': '30px'
                   }"
-                >
-                  หัวข้อ {{ i }}
-                </p>
+                >หัวข้อ {{ i }}</p>
                 <p
                   class="mb-1 text-center"
                   :style="{
                     color: '#443D3D',
-                    'font-family': 'DB Helvethaica X',
+                    'font-family': 'DB Helvethaica X Bd',
                     'font-weight': 'normal',
                     'font-size': '30px'
                   }"
-                >
-                  รายละเอียด
-                </p>
-              </v-flex>
-            </v-layout>
+                >รายละเอียด</p>
+              </v-col>
+            </v-row>
           </div>
         </client-only>
       </v-flex>
@@ -75,18 +69,16 @@
               class="mb-0 text-center"
               :style="{
                 color: 'black',
-                'font-family': 'DB Helvethaica X',
+                'font-family': 'DB Helvethaica X Bd',
                 'font-weight': 'bold',
                 'font-size': '70px'
               }"
-            >
-              ขณะนี้มีเควสเตอร์ในระบบทั้งหมด
-            </p>
+            >ขณะนี้มีเควสเตอร์ในระบบทั้งหมด</p>
             <p
               class="mb-0 text-center"
               :style="{
                 color: 'black',
-                'font-family': 'DB Helvethaica X',
+                'font-family': 'DB Helvethaica X Bd',
                 'font-weight': 'bold',
                 'font-size': '70px'
               }"
@@ -103,40 +95,27 @@
           </div>
         </client-only>
         <client-only>
-          <div
-            data-aos-once="true"
-            data-aos="fade-up"
-            data-aos-id="doneQuest"
-            data-aos-delay="300"
-          >
+          <div data-aos-once="true" data-aos="fade-up" data-aos-id="doneQuest" data-aos-delay="300">
             <p
               class="mb-0 text-center"
               :style="{
                 color: 'black',
-                'font-family': 'DB Helvethaica X',
+                'font-family': 'DB Helvethaica X Bd',
                 'font-weight': 'bold',
                 'font-size': '70px'
               }"
-            >
-              และมีเควสที่สำเร็จไปแล้วทั้งหมด
-            </p>
+            >และมีเควสที่สำเร็จไปแล้วทั้งหมด</p>
             <p
               class="mb-0 text-center"
               :style="{
                 color: 'black',
-                'font-family': 'DB Helvethaica X',
+                'font-family': 'DB Helvethaica X Bd',
                 'font-weight': 'bold',
                 'font-size': '70px'
               }"
             >
               <ICountUp
-                :style="{
-                  color: '#112D4E',
-                  'line-height': '80%',
-                  'font-family': 'DB Helvethaica X',
-                  'font-weight': 'bold',
-                  'font-size': '170px'
-                }"
+                class="iCountUp"
                 :delay="delay"
                 :end-val="doneQuest"
                 :options="options"
@@ -199,8 +178,7 @@ export default {
 .iCountUp {
   color: #3f72af;
   line-height: 80%;
-  font-family: 'DB Helvethaica X';
-  font-weight: bold;
-  font-size: 170px;
+  font-family: 'DB Helvethaica X Bd';
+  font-size: 5rem;
 }
 </style>

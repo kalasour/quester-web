@@ -132,19 +132,19 @@ export default {
     return {
       itemsLeft: [
         { text: 'Quester', font: 'SF Pro Display' },
-        { text: 'เกี่ยวกับเรา', font: 'DB Helvethaica X' },
-        { text: 'ทําไมต้อง Quester?', font: 'DB Helvethaica X' },
-        { text: 'วิธีการใช้งาน', font: 'DB Helvethaica X' },
-        { text: 'รีวิวจากผู้ใช้งาน', font: 'DB Helvethaica X' },
-        { text: 'แจ้งปัญหา/เพิ่มข้อคิดเห็น', font: 'DB Helvethaica X' }
+        { text: 'เกี่ยวกับเรา', font: 'DB Helvethaica X Bd' },
+        { text: 'ทําไมต้อง Quester?', font: 'DB Helvethaica X Bd' },
+        { text: 'วิธีการใช้งาน', font: 'DB Helvethaica X Bd' },
+        { text: 'รีวิวจากผู้ใช้งาน', font: 'DB Helvethaica X Bd' },
+        { text: 'แจ้งปัญหา/เพิ่มข้อคิดเห็น', font: 'DB Helvethaica X Bd' }
       ],
       itemsRight: [
-        { text: 'คําถามที่พบบ่อย', font: 'DB Helvethaica X' },
-        { text: 'เงื่อนไขการใช้บริการ', font: 'DB Helvethaica X' },
-        { text: 'ข้อกําหนดในการให้บริการ', font: 'DB Helvethaica X' },
-        { text: 'นโยบายความเป็นส่วนตัว', font: 'DB Helvethaica X' },
-        { text: 'ร่วมงานกับเรา', font: 'DB Helvethaica X' },
-        { text: 'คู่มือการใช้งาน', font: 'DB Helvethaica X' }
+        { text: 'คําถามที่พบบ่อย', font: 'DB Helvethaica X Bd' },
+        { text: 'เงื่อนไขการใช้บริการ', font: 'DB Helvethaica X Bd' },
+        { text: 'ข้อกําหนดในการให้บริการ', font: 'DB Helvethaica X Bd' },
+        { text: 'นโยบายความเป็นส่วนตัว', font: 'DB Helvethaica X Bd' },
+        { text: 'ร่วมงานกับเรา', font: 'DB Helvethaica X Bd' },
+        { text: 'คู่มือการใช้งาน', font: 'DB Helvethaica X Bd' }
       ]
     };
   }

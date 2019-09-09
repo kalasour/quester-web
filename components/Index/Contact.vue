@@ -4,7 +4,7 @@
       <span
         :style="{
           color: 'white',
-          'font-family': 'DB Helvethaica X',
+          'font-family': 'DB Helvethaica X Bd',
           'font-weight': 750,
           'font-size': '40px'
         }"

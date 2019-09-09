@@ -4,12 +4,11 @@
       <span
         :style="{
           color: 'white',
-          'font-family': 'DB Helvethaica X',
+          'font-family': 'DB Helvethaica X Bd',
           'font-weight': 750,
           'font-size': '40px'
         }"
-        >จะดีกว่าไหม ถ้าคุณจะได้เป็นทั้งผู้รับจ้างและจ้างเองในเวลาเดียวกัน</span
-      >
+      >จะดีกว่าไหม ถ้าคุณจะได้เป็นทั้งผู้รับจ้างและจ้างเองในเวลาเดียวกัน</span>
     </v-card-title>
   </v-card>
 </template>
