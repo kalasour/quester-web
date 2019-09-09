@@ -17,8 +17,14 @@
       <scrollactive class="hidden-md-only" v-on:itemchanged="onItemChanged">
         <v-btn text v-for="(item,index) in items" :key="index" @click="$vuetify.goTo(item.id)">
           <span
-            :style="{ 'font-family': item.font ,'font-size':'28px' ,'color':'#0F2F55','font-weight':650}"
-          >{{item.text}}</span>
+            :style="{
+              'font-family': item.font,
+              'font-size': '28px',
+              color: '#0F2F55',
+              'font-weight': 650
+            }"
+            >{{ item.text }}</span
+          >
         </v-btn>
       </scrollactive>
     </v-app-bar>
@@ -39,16 +45,22 @@
       <scrollactive class="hidden-md-only" v-on:itemchanged="onItemChanged">
         <!-- <a href="#why" class="scrollactive-item">Home</a> -->
         <v-btn
+          v-for="(item, index) in items"
+          :key="index"
           class="scrollactive-item"
           :href="item.id"
           text
-          v-for="(item,index) in items"
-          :key="index"
           @click="$vuetify.goTo(item.id)"
         >
           <span
-            :style="{ 'font-family': item.font ,'font-size':'28px' ,'color':'#FAFAFA','font-weight':650}"
-          >{{item.text}}</span>
+            :style="{
+              'font-family': item.font,
+              'font-size': '28px',
+              color: '#FAFAFA',
+              'font-weight': 650
+            }"
+            >{{ item.text }}</span
+          >
         </v-btn>
       </scrollactive>
     </v-app-bar>

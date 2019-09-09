@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Navbar />
-    <v-content :style="{'background-color':'#FAFAFA'}">
+    <v-content :style="{ 'background-color': '#FAFAFA' }">
       <v-layout class="py-0">
         <nuxt />
       </v-layout>
@@ -42,7 +42,7 @@ export default {
   }
 }
 </script>
-<style >
+<style>
 .blue-grad {
   background-image: linear-gradient(to bottom right, #0d5ab2, #0f2f55);
 }
