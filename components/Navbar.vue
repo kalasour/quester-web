@@ -14,7 +14,7 @@
       </v-toolbar-title>
       <div class="flex-grow-1"></div>
       <v-app-bar-nav-icon class="primary--text hidden-lg-and-up" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <scrollactive class="hidden-md-only" v-on:itemchanged="onItemChanged">
+      <scrollactive class="hidden-md-and-down" v-on:itemchanged="onItemChanged">
         <v-btn text v-for="(item,index) in items" :key="index" @click="$vuetify.goTo(item.id)">
           <span
             :style="{
@@ -42,7 +42,7 @@
       </v-toolbar-title>
       <div class="flex-grow-1"></div>
       <v-app-bar-nav-icon class="hidden-lg-and-up" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <scrollactive class="hidden-md-only" v-on:itemchanged="onItemChanged">
+      <scrollactive class="hidden-md-and-down" v-on:itemchanged="onItemChanged">
         <!-- <a href="#why" class="scrollactive-item">Home</a> -->
         <v-btn
           v-for="(item, index) in items"
