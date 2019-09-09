@@ -31,6 +31,7 @@
               <v-flex xs4>
                 <v-layout column wrap justify-center>
                   <span
+                    @click="$vuetify.goTo(i.id)"
                     v-for="(i,index) in itemsLeft"
                     :key="index"
                     :style="{ color: '#112D4E','font-family': i.font,'font-size':'23px' }"
@@ -43,7 +44,8 @@
                   <span
                     v-for="(i,index) in itemsRight"
                     :key="index"
-                    :style="{ color: '#112D4E','font-family': i.font,'font-size':'22px' }"
+                    class="no"
+                    :style="{ color: 'grey','font-family': i.font,'font-size':'22px' }"
                   >{{i.text}}</span>
                 </v-layout>
               </v-flex>
@@ -59,7 +61,7 @@
           <v-flex xs2>
             <v-img :src="require('../assets/logo/google-play.svg')" />
           </v-flex>
-        </v-layout> -->
+        </v-layout>-->
       </v-flex>
       <v-flex xs11>
         <hr class="mt-3" />
@@ -91,12 +93,16 @@ export default {
   data() {
     return {
       itemsLeft: [
-        { text: 'Quester', font: 'SF Pro Display' },
-        { text: 'เกี่ยวกับเรา', font: 'DB Helvethaica X' },
-        { text: 'ทําไมต้อง Quester?', font: 'DB Helvethaica X' },
-        { text: 'วิธีการใช้งาน', font: 'DB Helvethaica X' },
-        { text: 'รีวิวจากผู้ใช้งาน', font: 'DB Helvethaica X' },
-        { text: 'แจ้งปัญหา/เพิ่มข้อคิดเห็น', font: 'DB Helvethaica X' }
+        { text: 'Quester', font: 'SF Pro Display', id: '#index' },
+        { text: 'เกี่ยวกับเรา', font: 'DB Helvethaica X', id: '#index' },
+        { text: 'ทําไมต้อง Quester?', font: 'DB Helvethaica X', id: '#why' },
+        { text: 'วิธีการใช้งาน', font: 'DB Helvethaica X', id: '#how' },
+        { text: 'รีวิวจากผู้ใช้งาน', font: 'DB Helvethaica X', id: '#what' },
+        {
+          text: 'แจ้งปัญหา/เพิ่มข้อคิดเห็น',
+          font: 'DB Helvethaica X',
+          id: '#comment'
+        }
       ],
       itemsRight: [
         { text: 'คําถามที่พบบ่อย', font: 'DB Helvethaica X' },
