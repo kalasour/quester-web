@@ -6,53 +6,46 @@
         <v-layout row wrap justify-center></v-layout>
       </v-flex>
       <v-flex class="my-5" xs12>
-        <v-layout row wrap justify-center>
-          <v-flex xs3>
-            <v-layout row wrap justify-space-around>
-              <v-flex xs2>
-                <v-img max-height="50" contain :src="require('../assets/logo/facebook.svg')" />
-              </v-flex>
-              <v-divider :style="{ 'border-left': '2px solid grey' }" vertical></v-divider>
-              <v-flex xs2>
-                <v-img max-height="50" contain :src="require('../assets/logo/line.svg')" />
-              </v-flex>
-              <v-divider :style="{ 'border-left': '2px solid grey' }" vertical></v-divider>
-              <v-flex xs2>
-                <v-img max-height="50" contain :src="require('../assets/logo/ig.svg')" />
-              </v-flex>
-            </v-layout>
-          </v-flex>
-        </v-layout>
+        <v-row :justify="justify-center" class="px-10">
+          <v-layout row wrap justify-center>
+            <v-flex sm2>
+              <v-img max-height="50" contain :src="require('../assets/logo/facebook.svg')" />
+            </v-flex>
+            <v-divider :style="{ 'border-left': '2px solid grey' }" vertical></v-divider>
+            <v-flex sm2>
+              <v-img max-height="50" contain :src="require('../assets/logo/line.svg')" />
+            </v-flex>
+            <v-divider :style="{ 'border-left': '2px solid grey' }" vertical></v-divider>
+            <v-flex sm2>
+              <v-img max-height="50" contain :src="require('../assets/logo/ig.svg')" />
+            </v-flex>
+          </v-layout>
+        </v-row>
       </v-flex>
-      <v-flex class="mt-5" xs5 align-self-center>
-        <v-layout row wrap justify-center>
-          <v-flex xs10>
-            <v-layout row wrap justify-space-around>
-              <v-flex xs4>
-                <v-layout column wrap justify-center>
-                  <span
-                    @click="$vuetify.goTo(i.id)"
-                    v-for="(i,index) in itemsLeft"
-                    :key="index"
-                    :style="{
+      <v-flex class="mt-5" sm5 align-self-center>
+        <v-layout row wrap justify-space-around>
+          <v-flex sm4>
+            <v-layout column wrap justify-center class="text-center">
+              <span
+                @click="$vuetify.goTo(i.id)"
+                v-for="(i,index) in itemsLeft"
+                :key="index"
+                :style="{
                       color: '#112D4E',
                       'font-family': i.font,
-                      'font-size': '23px'
+                      'font-size': '1.25em'
                     }"
-                  >{{ i.text }}</span>
-                </v-layout>
-              </v-flex>
-              <v-divider :style="{ 'border-left': '1px solid #112D4E' }" vertical></v-divider>
-              <v-flex xs4>
-                <v-layout column wrap justify-center>
-                  <span
-                    v-for="(i, index) in itemsRight"
-                    :key="index"
-                    class="no"
-                    :style="{ color: 'grey','font-family': i.font,'font-size':'22px' }"
-                  >{{i.text}}</span>
-                </v-layout>
-              </v-flex>
+              >{{ i.text }}</span>
+            </v-layout>
+          </v-flex>
+          <v-divider :style="{ 'border-left': '1px solid #112D4E' }" vertical></v-divider>
+          <v-flex sm4>
+            <v-layout column wrap justify-center class="text-center">
+              <span
+                v-for="(i, index) in itemsRight"
+                :key="index"
+                :style="{ color: 'grey','font-family': i.font,'font-size':'1.25em' }"
+              >{{i.text}}</span>
             </v-layout>
           </v-flex>
         </v-layout>
@@ -67,10 +60,10 @@
           </v-flex>
         </v-layout>-->
       </v-flex>
-      <v-flex xs11>
+      <v-flex sm11>
         <hr class="mt-3" />
       </v-flex>
-      <v-flex xs12 class="my-2">
+      <v-flex sm12 class="my-2">
         <v-layout row wrap justify-center>
           <span
             class="no"
@@ -113,12 +106,12 @@ export default {
         }
       ],
       itemsRight: [
-        { text: 'คําถามที่พบบ่อย', font: 'DB Helvethaica X Bd' },
-        { text: 'เงื่อนไขการใช้บริการ', font: 'DB Helvethaica X Bd' },
-        { text: 'ข้อกําหนดในการให้บริการ', font: 'DB Helvethaica X Bd' },
-        { text: 'นโยบายความเป็นส่วนตัว', font: 'DB Helvethaica X Bd' },
-        { text: 'ร่วมงานกับเรา', font: 'DB Helvethaica X Bd' },
-        { text: 'คู่มือการใช้งาน', font: 'DB Helvethaica X Bd' }
+        { text: 'คําถามที่พบบ่อย', font: 'DB Helvethaica X' },
+        { text: 'เงื่อนไขการใช้บริการ', font: 'DB Helvethaica X' },
+        { text: 'ข้อกําหนดในการให้บริการ', font: 'DB Helvethaica X' },
+        { text: 'นโยบายความเป็นส่วนตัว', font: 'DB Helvethaica X' },
+        { text: 'ร่วมงานกับเรา', font: 'DB Helvethaica X' },
+        { text: 'คู่มือการใช้งาน', font: 'DB Helvethaica X' }
       ]
     };
   }

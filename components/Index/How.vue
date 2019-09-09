@@ -64,11 +64,11 @@
         >
           <p class="mb-3 text-center how-to-text">{{ steps[i] }}</p>
         </div>
-        <v-divider class="d-md-none mt-12"></v-divider>
+        <v-divider class="hidden-md-and-up mt-12"></v-divider>
       </v-col>
     </v-row>
 
-    <v-divider class="my-10"></v-divider>
+    <v-divider class="hidden-sm-and-down my-10"></v-divider>
 
     <div
       class="mt-5"
@@ -143,7 +143,7 @@
           <p class="mb-3 text-center how-to-text">{{ steps[i + 2] }}</p>
         </div>
 
-        <v-divider class="d-md-none mt-12"></v-divider>
+        <v-divider class="hidden-md-and-up mt-12"></v-divider>
       </v-col>
     </v-row>
   </div>

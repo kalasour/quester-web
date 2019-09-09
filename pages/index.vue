@@ -26,15 +26,8 @@
         <!-- <What /> -->
       </v-flex>
     </v-layout>
-    <v-layout
-      :style="{ height: screenHeight }"
-      class="blue-grad-bot"
-      id="comment"
-      wrap
-      justify-center
-      align-start
-    >
-      <v-flex xs8 class="pt-5">
+    <v-layout class="blue-grad-bot" id="comment" wrap justify-center align-start>
+      <v-flex>
         <Comment class="pt-5" />
       </v-flex>
     </v-layout>
@@ -78,3 +71,6 @@ export default {
   }
 };
 </script>
+
+<style>
+</style>

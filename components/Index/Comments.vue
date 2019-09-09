@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pa-12">
     <v-layout row wrap justify-center>
       <v-flex xs12>
         <div data-aos-once="true" data-aos-duration="700" data-aos="fade-down" data-aos-delay="400">
@@ -9,14 +9,14 @@
               color: 'white',
               'font-family': 'DB Helvethaica X Bd',
               'font-weight': 750,
-              'font-size': '50px'
+              'font-size': '3em'
             }"
           >สร้างเควสของคุณวันนี้ เพื่อความสะดวกสบายในชีวิต โหลดเลย</p>
         </div>
       </v-flex>
       <v-flex xs12 class="mt-3 mb-5">
-        <v-layout row wrap justify-center>
-          <v-flex xs3>
+        <v-row :justify="justify-center">
+          <v-col md="6" sm="10">
             <div
               data-aos-once="true"
               data-aos-duration="700"
@@ -25,8 +25,8 @@
             >
               <v-img contain :src="require('~/assets/logo/app-store.svg')" />
             </div>
-          </v-flex>
-          <v-flex xs3>
+          </v-col>
+          <v-col md="6" sm="10">
             <div
               data-aos-once="true"
               data-aos-duration="700"
@@ -35,8 +35,8 @@
             >
               <v-img contain :src="require('~/assets/logo/google-play.svg')" />
             </div>
-          </v-flex>
-        </v-layout>
+          </v-col>
+        </v-row>
       </v-flex>
       <v-flex xs12>
         <div data-aos-once="true" data-aos-duration="700" data-aos="zoom-in" data-aos-delay="400">
@@ -47,7 +47,7 @@
               'line-height': '80%',
               'font-family': 'DB Helvethaica X Bd',
               'font-weight': 350,
-              'font-size': '50px'
+              'font-size': '2em'
             }"
           >เพิ่มข้อคิดเห็น</p>
         </div>
@@ -60,7 +60,7 @@
               color: 'white',
               'font-family': 'DB Helvethaica X Bd',
               'font-weight': 150,
-              'font-size': '32px'
+              'font-size': '2em'
             }"
           >เพื่อไปสู่การเป็นแอปพลิเคชันที่ดีที่สุดของทุกคน</p>
         </div>
@@ -75,7 +75,7 @@
               color: 'white',
               'font-family': 'DB Helvethaica X Bd',
               'font-weight': 350,
-              'font-size': '26px'
+              'font-size': '1.5em'
             }"
             name="input-7-1"
             hide-details
@@ -92,7 +92,7 @@
               color: 'white',
               'font-family': 'DB Helvethaica X Bd',
               'font-weight': 350,
-              'font-size': '22px'
+              'font-size': '1em'
             }"
             name="input-7-1"
             placeholder="เพิ่มข้อคิดเห็น..."
@@ -103,7 +103,7 @@
                 color: 'white',
                 'font-family': 'DB Helvethaica X Bd',
                 'font-weight': 350,
-                'font-size': '22px'
+                'font-size': '1em'
               }"
               color="white"
               class="mt-5"

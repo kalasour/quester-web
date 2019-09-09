@@ -2,129 +2,116 @@
   <div>
     <v-card class="text-xs-center py-5 mt-5 blue-grad" flat tile outlined>
       <v-card-title class="justify-center">
-        <client-only>
-          <div data-aos-once="true" data-aos="fade-down" data-aos-delay="200">
-            <p
-              class="mb-1"
-              :style="{
+        <div data-aos-once="true" data-aos="fade-down" data-aos-delay="200">
+          <p
+            class="mb-1"
+            :style="{
                 color: 'white',
                 'font-family': 'DB Helvethaica X Bd',
                 'font-weight': 750,
                 'font-size': '70px'
               }"
-            >รีวิวจากผู้ใช้งาน</p>
-          </div>
-        </client-only>
+          >รีวิวจากผู้ใช้งาน</p>
+        </div>
       </v-card-title>
     </v-card>
     <v-layout row wrap justify-center>
       <v-flex xs11>
-        <client-only>
-          <div
-            data-aos-once="true"
-            data-aos="zoom-out"
-            data-aos-duration="700"
-            data-aos-delay="300"
-          >
-            <v-row>
-              <v-col v-for="i in 4" :key="i" md="3" sm="4">
-                <v-img
-                  max-height="500"
-                  contain
-                  class="mt-5 mb-1"
-                  :src="require('~/assets/photo/review/1.svg')"
-                />
-                <p
-                  class="mb-0 text-center"
-                  :style="{
+        <div data-aos-once="true" data-aos="zoom-out" data-aos-duration="700" data-aos-delay="300">
+          <v-row>
+            <v-col v-for="i in 4" :key="i" md="3" sm="4">
+              <v-img
+                max-height="500"
+                contain
+                class="mt-5 mb-1"
+                :src="require('~/assets/photo/review/1.svg')"
+              />
+              <p
+                class="mb-0 text-center"
+                :style="{
                     color: '#443D3D',
                     'font-family': 'DB Helvethaica X Bd',
                     'font-weight': 'bold',
                     'font-size': '30px'
                   }"
-                >หัวข้อ {{ i }}</p>
-                <p
-                  class="mb-1 text-center"
-                  :style="{
+              >หัวข้อ {{ i }}</p>
+              <p
+                class="mb-1 text-center"
+                :style="{
                     color: '#443D3D',
                     'font-family': 'DB Helvethaica X Bd',
                     'font-weight': 'normal',
                     'font-size': '30px'
                   }"
-                >รายละเอียด</p>
-              </v-col>
-            </v-row>
-          </div>
-        </client-only>
+              >รายละเอียด</p>
+            </v-col>
+          </v-row>
+        </div>
       </v-flex>
-      <v-flex xs12>
-        <client-only>
-          <div
-            data-aos-once="true"
-            data-aos="fade-up"
-            data-aos-id="currentQuest"
-            data-aos-delay="300"
+      <v-flex class="pa-12">
+        <div
+          data-aos-once="true"
+          data-aos="fade-up"
+          data-aos-id="currentQuest"
+          data-aos-delay="300"
+        >
+          <p
+            class="mb-0 text-center"
+            :style="{
+                color: 'black',
+                'font-family': 'DB Helvethaica X Bd',
+                'font-weight': 'bold',
+                'font-size': '2.5em'
+              }"
+          >ขณะนี้มีเควสเตอร์มากกว่า</p>
+          <p
+            class="mb-0 text-center"
+            :style="{
+                color: 'black',
+                'font-family': 'DB Helvethaica X Bd',
+                'font-weight': 'bold',
+                'font-size': '2.5em'
+              }"
           >
-            <p
-              class="mb-0 text-center"
-              :style="{
+            <ICountUp
+              class="iCountUp"
+              :delay="delay"
+              :end-val="currentQuester"
+              :options="options"
+              @ready="onReady"
+            />
+            {{ ' ' }}คน
+          </p>
+        </div>
+        <div data-aos-once="true" data-aos="fade-up" data-aos-id="doneQuest" data-aos-delay="300">
+          <p
+            class="mb-0 text-center"
+            :style="{
                 color: 'black',
                 'font-family': 'DB Helvethaica X Bd',
                 'font-weight': 'bold',
-                'font-size': '70px'
+                'font-size': '2.5em'
               }"
-            >ขณะนี้มีเควสเตอร์ในระบบทั้งหมด</p>
-            <p
-              class="mb-0 text-center"
-              :style="{
+          >และมีเควสที่สำเร็จมากกว่า</p>
+          <p
+            class="mb-0 text-center"
+            :style="{
                 color: 'black',
                 'font-family': 'DB Helvethaica X Bd',
                 'font-weight': 'bold',
-                'font-size': '70px'
+                'font-size': '2.5em'
               }"
-            >
-              <ICountUp
-                class="iCountUp"
-                :delay="delay"
-                :end-val="currentQuester"
-                :options="options"
-                @ready="onReady"
-              />
-              {{ ' ' }}คน
-            </p>
-          </div>
-        </client-only>
-        <client-only>
-          <div data-aos-once="true" data-aos="fade-up" data-aos-id="doneQuest" data-aos-delay="300">
-            <p
-              class="mb-0 text-center"
-              :style="{
-                color: 'black',
-                'font-family': 'DB Helvethaica X Bd',
-                'font-weight': 'bold',
-                'font-size': '70px'
-              }"
-            >และมีเควสที่สำเร็จไปแล้วทั้งหมด</p>
-            <p
-              class="mb-0 text-center"
-              :style="{
-                color: 'black',
-                'font-family': 'DB Helvethaica X Bd',
-                'font-weight': 'bold',
-                'font-size': '70px'
-              }"
-            >
-              <ICountUp
-                class="iCountUp"
-                :delay="delay"
-                :end-val="doneQuest"
-                :options="options"
-                @ready="onReady2"
-              />
-              {{ ' ' }}เควส
-            </p>
-          </div>
-        </client-only>
+          >
+            <ICountUp
+              class="iCountUp"
+              :delay="delay"
+              :end-val="doneQuest"
+              :options="options"
+              @ready="onReady2"
+            />
+            {{ ' ' }}เควส
+          </p>
+        </div>
       </v-flex>
     </v-layout>
   </div>
