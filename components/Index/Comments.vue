@@ -88,7 +88,7 @@
             auto-grow
             rows="6"
             :style="{
-              'border-bottom': '1px solid red',
+              'border-bottom': '1px solid grey',
               color: 'white',
               'font-family': 'DB Helvethaica X Bd',
               'font-weight': 350,

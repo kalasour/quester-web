@@ -27,7 +27,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['aos/dist/aos.css'],
+  css: ['aos/dist/aos.css','@css/font.css'],
   /*
    ** Plugins to load before mounting the App
    */

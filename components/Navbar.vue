@@ -1,7 +1,7 @@
 <template>
   <div>
-    <v-app-bar fixed class="py-1 custom-nav" color="#FAFAFA" dark>
-      <v-img max-height="50" contain :src="require('~/assets/logo/quester-logo-trans.svg')" />
+    <v-app-bar fixed class="py-1 " color="#FAFAFA" dark>
+      <v-img max-width="100" max-height="50" contain :src="require('~/assets/logo/quester-logo-trans.svg')" />
       <v-toolbar-title>
         <!-- <span
           :style="{ 'font-family': 'SF Pro Display','font-weight': 750,'font-size':'30px','color':'#112D4E' }"
@@ -22,7 +22,7 @@
         </v-btn>
       </scrollactive>
     </v-app-bar>
-    <v-app-bar fixed class="py-1 pr-5 custom-nav" color="#FAFAFA" dark>
+    <v-app-bar fixed class="py-1 custom-nav" color="#FAFAFA" dark>
       <v-img
         max-width="100"
         max-height="50"
@@ -35,7 +35,7 @@
         >Quester</span>-->
       </v-toolbar-title>
       <div class="flex-grow-1"></div>
-      <v-app-bar-nav-icon class="hidden-lg-and-up" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon class="white--text hidden-lg-and-up" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <scrollactive class="hidden-md-and-down" v-on:itemchanged="onItemChanged">
         <!-- <a href="#why" class="scrollactive-item">Home</a> -->
         <v-btn
@@ -87,7 +87,7 @@
   -webkit-transition: opacity 0.25s ease-in-out;
   -o-transition: opacity 0.25s ease-in-out;
   transition: opacity 0.25s ease-in-out;
-  opacity: 1;
+  opacity: 0;
   /* background: #0d5ab2; */
   background: linear-gradient(to right, #0d5ab2, #0f2f55);
   box-shadow: 0px 0px 0px;
